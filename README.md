@@ -2,7 +2,10 @@
 
 To run the client
 ```
-cd DrachtioReferenceClient
+npm install -g cordova ionic
+git clone https://github.com/andrewvmail/drachtio-p2p
+
+cd drachtio-p2p/DrachtioReferenceClient
 npm install
 ionic serve
 ```
