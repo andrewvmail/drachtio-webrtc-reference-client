@@ -1,0 +1,19 @@
+{
+  "name": "simple-drachtio-registrar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dave Horton",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^1.26.2",
+    "drachtio-mw-registration-parser": "0.0.2",
+    "drachtio-sip": "^0.3.4",
+    "drachtio-srf": "^4.1.2",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0"
+  }
+}

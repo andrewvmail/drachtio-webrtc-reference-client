@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Drachtio Reference Client</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="outer-content">
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Register as</ion-label>
+      <ion-input type="text" [(ngModel)]="userId" placeholder="userId" value="bob"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <button full ion-button outline item-end (click)="register()">Register</button>
+    </ion-item>
+    <ion-item>
+      <button full ion-button outline item-end (click)="unregister()">Un-register</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Call</ion-label>
+      <ion-input type="text" [(ngModel)]="toCall" placeholder="toCall" value=""></ion-input>
+
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <button full ion-button outline item-end (click)="call()">Call</button>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

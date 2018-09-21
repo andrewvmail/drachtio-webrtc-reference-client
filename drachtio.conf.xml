@@ -1,0 +1,33 @@
+<!-- https://github.com/davehorton/drachtio-server/blob/master/drachtio.conf.xml -->
+<drachtio>
+    <admin port="9022" secret="cymru">0.0.0.0</admin>
+    <sip>
+        <contacts>
+            <contact>sip:0.0.0.0:5040;transport=tcp,udp</contact>
+            <contact>sip:0.0.0.0:80;transport=ws</contact>
+            <contact>sips:0.0.0.0;transport=tls</contact>
+            <contact>sips:0.0.0.0:443;transport=wss</contact>
+        </contacts>
+        <tls>
+            <key-file>/Users/andrew/projects/kosmos/certs/letsencrypt/live/kosmosmobile.com/privkey.pem</key-file>
+            <cert-file>/Users/andrew/projects/kosmos/certs/letsencrypt/live/kosmosmobile.com/cert.pem</cert-file>
+            <chain-file>/Users/andrew/projects/kosmos/certs/letsencrypt/live/kosmosmobile.com/chain.pem</chain-file>
+        </tls>
+        <spammers action="reject" tcp-action="discard">
+            <header name="User-Agent">
+                <value>sip-cli</value>
+                <value>sipcli</value>
+                <value>friendly-scanner</value>
+            </header>
+            <header>
+                <value>sipvicious</value>
+            </header>
+        </spammers>
+    </sip>
+    <cdrs>true</cdrs>
+    <logging>
+        <console/>
+        <sofia-loglevel>9</sofia-loglevel>
+        <loglevel>debug</loglevel>
+    </logging>
+</drachtio>
