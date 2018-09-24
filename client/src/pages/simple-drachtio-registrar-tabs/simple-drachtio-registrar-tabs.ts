@@ -1,6 +1,4 @@
 import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
-import SIP from "sip.js";
 import { SimpleDrachtioRegistrarDialerPage } from '../simple-drachtio-registrar-dialer/simple-drachtio-registrar-dialer'
 import {
   SimpleDrachtioRegistrarSettingsPage
