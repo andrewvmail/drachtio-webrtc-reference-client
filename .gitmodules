@@ -1,3 +1,6 @@
 [submodule "simple-drachtio-registrar"]
 	path = simple-drachtio-registrar
 	url = https://github.com/davehorton/simple-drachtio-registrar
+[submodule "drachtio-simple-server"]
+	path = drachtio-simple-server
+	url = https://github.com/davehorton/drachtio-simple-server
