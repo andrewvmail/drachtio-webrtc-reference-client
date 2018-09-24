@@ -10,7 +10,7 @@ This application is built with
 ```
 npm install -g ionic
 git clone https://github.com/andrewvmail/drachtio-webrtc-reference-client
-cd drachtio-p2p/client
+cd drachtio-webrtc-reference-client/client
 npm install
 ionic serve
 ```
