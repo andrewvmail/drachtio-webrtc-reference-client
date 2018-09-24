@@ -36,7 +36,7 @@
 
     <button ion-item>
       <ion-icon name="person" item-start color="primary"></ion-icon>
-      <ion-label>Username</ion-label>
+      <ion-label>Auth Username</ion-label>
       <ion-input text-right item-end value="{{username}}"
                  (blur)="saveInput({target: 'simpleDrachtioRegistrar.settings.username', value: $event.target.value})"
 
@@ -52,14 +52,14 @@
       ></ion-input>
     </button>
 
-    <ion-item>
-      <ion-icon name="call" item-start color="primary"></ion-icon>
-      <ion-label>Auto Register</ion-label>
-      <ion-toggle color="secondary" checked="{{autoRegister}}"
-                  (ionChange)="saveInput({target: 'simpleDrachtioRegistrar.settings.autoRegister', value: !autoRegister})"
+    <!--<ion-item>-->
+      <!--<ion-icon name="call" item-start color="primary"></ion-icon>-->
+      <!--<ion-label>Auto Register</ion-label>-->
+      <!--<ion-toggle color="secondary" checked="{{autoRegister}}"-->
+                  <!--(ionChange)="saveInput({target: 'simpleDrachtioRegistrar.settings.autoRegister', value: !autoRegister})"-->
 
-      ></ion-toggle>
-    </ion-item>
+      <!--&gt;</ion-toggle>-->
+    <!--</ion-item>-->
 
   </ion-list>
 

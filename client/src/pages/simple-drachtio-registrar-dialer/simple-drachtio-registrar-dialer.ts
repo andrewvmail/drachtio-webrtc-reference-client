@@ -1,65 +1,33 @@
-import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
-import SIP from "sip.js";
+import {
+  Component,
+  ChangeDetectorRef,
+  ChangeDetectionStrategy
+} from "@angular/core";
+import {
+  connect,
+  ControllerService,
+  CerebralComponent
+} from "@cerebral/angular";
+import { state, signal } from "cerebral/tags";
 
 @Component({
   selector: "page-simple-drachtio-registrar-dialer",
-  templateUrl: "simple-drachtio-registrar-dialer.html"
+  templateUrl: "simple-drachtio-registrar-dialer.html",
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SimpleDrachtioRegistrarDialerPage {
-  ua;
-  userId;
-  toCall;
-  session;
-  domain = "127.0.0.1";
-
-  constructor(public navCtrl: NavController) {
-    console.log(SIP);
-  }
-
-  register() {
-    this.ua = new SIP.UA({
-      uri: this.userId + "@" + this.domain,
-      transportOptions: {
-        wsServers: ["ws://" + this.domain]
-      },
-      register: true
-    });
-
-    this.ua.on("invite", function(session) {
-      this.trackAdded(session);
-      session.accept();
-    });
-  }
-
-  unregister() {
-    this.ua.unregister();
-  }
-
-  call() {
-    this.session = this.ua.invite(this.toCall + "@" + this.domain, {
-      sessionDescriptionHandlerOptions: {
-        constraints: {
-          audio: true,
-          video: false
-        }
-      }
-    });
-    this.trackAdded(this.session);
-  }
-
-  trackAdded(session) {
-    session.on("trackAdded", function() {
-      var remoteAudio: any = document.getElementById("remoteAudio");
-
-      var pc = session.sessionDescriptionHandler.peerConnection;
-      var remoteStream;
-
-      remoteStream = pc.getRemoteStreams()[0];
-
-      remoteAudio.srcObject = remoteStream;
-      remoteAudio.volume = 1;
-      remoteAudio.play();
-    });
+@connect({
+  toCall: state(["simpleDrachtioRegistrar.toCall"]),
+  registered: state(["simpleDrachtioRegistrar.registered"]),
+  call: signal(["simpleDrachtioRegistrar.call"]),
+  register: signal(["simpleDrachtioRegistrar.register"]),
+  unregister: signal(["simpleDrachtioRegistrar.unregister"]),
+  saveInput: signal(["saveInput"]),
+})
+export class SimpleDrachtioRegistrarDialerPage extends CerebralComponent{
+  constructor(
+    public cdr: ChangeDetectorRef,
+    public controller: ControllerService
+  ) {
+    super(cdr, controller);
   }
 }

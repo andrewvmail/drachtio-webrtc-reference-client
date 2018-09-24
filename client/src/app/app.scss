@@ -50,3 +50,13 @@
 .list-md > .item-block:last-child .item-inner,.list-md > .item-wrapper:last-child .item-inner{
   border-bottom:1px solid #dcdcdc;
 }
+
+.btn--no-border {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text--large {
+  font-size: 2em;
+}

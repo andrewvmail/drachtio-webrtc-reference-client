@@ -11,41 +11,24 @@
 
 
 <ion-content class="outer-content">
-  <audio id="remoteAudio"></audio>
+    <audio id="remoteAudio"></audio>
 
-  <ion-list>
     <ion-item>
-      <ion-label color="primary">Server</ion-label>
-      <ion-input type="text" [(ngModel)]="domain"></ion-input>
+      <ion-input class="text--large" type="text" value="{{toCall}}" placeholder="Enter a number or name"
+                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.toCall', value: $event.target.value})"
+      ></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label color="primary">Register as</ion-label>
-      <ion-input type="text" [(ngModel)]="userId" placeholder="userId" value="bob"></ion-input>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item>
-      <button full ion-button outline item-end (click)="register()">Register</button>
-    </ion-item>
-    <ion-item>
-      <button full ion-button outline item-end (click)="unregister()">Un-register</button>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item>
-      <ion-label color="primary">Call</ion-label>
-      <ion-input type="text" [(ngModel)]="toCall" placeholder="toCall" value=""></ion-input>
-
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item>
-      <button full ion-button outline item-end (click)="call()">Call</button>
-    </ion-item>
-  </ion-list>
-
 
 </ion-content>
+
+<ion-footer no-border>
+  <ion-input class="text--large" type="text" placeholder="Username"
+             (blur)="saveInput({target: 'simpleDrachtioRegistrar.username', value: $event.target.value})"
+  ></ion-input>
+  <button class="btn--no-border" color="secondary" full large ion-button item-end
+          (click)="registered ? unregister() : register()"
+  >
+    {{registered ? 'Unregister' : 'Register' }}
+  </button>
+  <button class="btn--no-border" full large ion-button item-end (click)="call()">Call</button>
+</ion-footer>

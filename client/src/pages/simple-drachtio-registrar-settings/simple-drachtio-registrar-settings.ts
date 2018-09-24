@@ -20,7 +20,7 @@ import { state, signal } from "cerebral/tags";
   domain: state(["simpleDrachtioRegistrar.settings.domain"]),
   username: state(["simpleDrachtioRegistrar.settings.username"]),
   password: state(["simpleDrachtioRegistrar.settings.password"]),
-  autoRegister: state(["simpleDrachtioRegistrar.settings.autoRegister"]),
+  // autoRegister: state(["simpleDrachtioRegistrar.settings.autoRegister"]),
 
   saveInput: signal(["saveInput"]),
 })

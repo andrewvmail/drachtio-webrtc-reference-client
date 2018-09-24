@@ -7,7 +7,6 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { ControllerService } from "@cerebral/angular";
 
 import { MyApp } from "./app.component";
-import { HomePage } from "../pages/home/home";
 import { SimpleDrachtioRegistrarTabsPage } from "../pages/simple-drachtio-registrar-tabs/simple-drachtio-registrar-tabs";
 import { SimpleDrachtioRegistrarDialerPage } from "../pages/simple-drachtio-registrar-dialer/simple-drachtio-registrar-dialer";
 import { SimpleDrachtioRegistrarSettingsPage } from "../pages/simple-drachtio-registrar-settings/simple-drachtio-registrar-settings";
@@ -17,20 +16,19 @@ import Devtools from "cerebral/devtools";
 
 function configureController() {
   return new ControllerService(cerebral, {
-    devtools: Devtools({
-      host: "localhost:9999",
-      reconnect: true,
-      storeMutations: true,
-      bigComponentsWarning: 5,
-      warnStateProps: true
-    }),
+    // devtools: Devtools({
+    //   host: "localhost:9999",
+    //   reconnect: true,
+    //   storeMutations: true,
+    //   bigComponentsWarning: 5,
+    //   warnStateProps: true
+    // }),
   });
 }
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     SimpleDrachtioRegistrarTabsPage,
     SimpleDrachtioRegistrarDialerPage,
     SimpleDrachtioRegistrarSettingsPage
@@ -39,7 +37,6 @@ function configureController() {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     SimpleDrachtioRegistrarTabsPage,
     SimpleDrachtioRegistrarDialerPage,
     SimpleDrachtioRegistrarSettingsPage
