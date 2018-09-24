@@ -18,27 +18,47 @@
     </ion-list-header>
 
     <button ion-item>
+      <ion-icon name="globe" item-start color="primary"
+               ></ion-icon>
+      <ion-label>Server</ion-label>
+      <ion-input text-right item-end value="{{server}}"
+                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.settings.server', value: $event.target.value})"
+      ></ion-input>
+    </button>
+
+    <button ion-item>
       <ion-icon name="globe" item-start color="primary"></ion-icon>
       <ion-label>Domain</ion-label>
-      <ion-input text-right item-end value="{{domain}}"></ion-input>
+      <ion-input text-right item-end value="{{domain}}"
+                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.settings.domain', value: $event.target.value})"
+      ></ion-input>
     </button>
 
     <button ion-item>
       <ion-icon name="person" item-start color="primary"></ion-icon>
       <ion-label>Username</ion-label>
-      <ion-input text-right item-end value="{{username}}"></ion-input>
+      <ion-input text-right item-end value="{{username}}"
+                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.settings.username', value: $event.target.value})"
+
+      ></ion-input>
     </button>
 
     <button ion-item>
       <ion-icon name="wifi" item-start color="primary"></ion-icon>
       <ion-label>Password</ion-label>
-      <ion-input text-right item-end value="{{password}}"></ion-input>
+      <ion-input text-right item-end value="{{password}}"
+                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.settings.password', value: $event.target.value})"
+
+      ></ion-input>
     </button>
 
     <ion-item>
       <ion-icon name="call" item-start color="primary"></ion-icon>
       <ion-label>Auto Register</ion-label>
-      <ion-toggle color="secondary" checked="{{autoRegister}}"></ion-toggle>
+      <ion-toggle color="secondary" checked="{{autoRegister}}"
+                  (ionChange)="saveInput({target: 'simpleDrachtioRegistrar.settings.autoRegister', value: !autoRegister})"
+
+      ></ion-toggle>
     </ion-item>
 
   </ion-list>
