@@ -3,10 +3,8 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { connect, ControllerService } from "@cerebral/angular";
-
-
-import { HomePage } from '../pages/home/home';
 import { SimpleDrachtioRegistrarTabsPage } from '../pages/simple-drachtio-registrar-tabs/simple-drachtio-registrar-tabs'
+
 @Component({
   templateUrl: 'app.html'
 })
