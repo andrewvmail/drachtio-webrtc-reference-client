@@ -1,0 +1,3 @@
+[submodule "simple-drachtio-registrar"]
+	path = simple-drachtio-registrar
+	url = https://github.com/davehorton/simple-drachtio-registrar
