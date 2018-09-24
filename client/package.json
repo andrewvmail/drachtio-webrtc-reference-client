@@ -1,8 +1,8 @@
 {
   "name": "DrachtioReferenceClient",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Andrew Tan",
+  "homepage": "https://github.com/andrewvmail/drachtio-webrtc-reference-client",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
@@ -35,5 +35,5 @@
     "@ionic/app-scripts": "3.2.0",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "Reference SIP client implementation to use with Drachtio sample and reference applications."
 }
