@@ -22,9 +22,6 @@
 </ion-content>
 
 <ion-footer no-border>
-  <ion-input class="text--large" type="text" placeholder="Username"
-             (blur)="saveInput({target: 'simpleDrachtioRegistrar.username', value: $event.target.value})"
-  ></ion-input>
   <button class="btn--no-border" color="secondary" full large ion-button item-end
           (click)="registered ? unregister() : register()"
   >

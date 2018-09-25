@@ -1,6 +1,10 @@
 import { Module } from 'cerebral'
 import * as sequences from "./sequences"
 
+
+const urlParams = new URLSearchParams(window.location.search);
+const username = urlParams.get('username');
+
 export default Module({
   state: {
     settings: {
@@ -12,7 +16,8 @@ export default Module({
     },
     lastDialed: "",
     toCall: "",
-    registered: false
+    registered: false,
+    username: username || ''
   },
   signals: {
     call: sequences.callSequence,
