@@ -7,13 +7,15 @@ This application is built with
 - Cerebral.js for state management and control flow
 
 ## To run the client
-```
-npm install -g ionic
-git clone https://github.com/andrewvmail/drachtio-webrtc-reference-client
-cd drachtio-webrtc-reference-client/client
-npm install
-ionic serve
-```
+
+set username as bob
+https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=bob
+
+set username as mary
+https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=mary
+
+set username using the auth username in the settings option
+https://andrewvmail.github.io/drachtio-webrtc-reference-client
 
 ## Todo
 - drachtio-sip-registrar: in call modals
