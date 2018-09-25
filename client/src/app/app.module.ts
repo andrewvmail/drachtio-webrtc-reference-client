@@ -17,20 +17,20 @@ import { SimpleDrachtioRegistrarDialerPage } from "../pages/simple-drachtio-regi
 import { SimpleDrachtioRegistrarSettingsPage } from "../pages/simple-drachtio-registrar-settings/simple-drachtio-registrar-settings";
 import { SimpleDrachtioRegistrarInCallModalPage } from "../pages/simple-drachtio-registrar-in-call-modal/simple-drachtio-registrar-in-call-modal";
 
-import cerebral, { cerebralFactory } from "../cerebral";
+import { cerebralFactory } from "../cerebral";
 import Devtools from "cerebral/devtools";
 
 function configureController(modal: ModalController) {
   const cerebral = cerebralFactory(modal);
 
   return new ControllerService(cerebral, {
-    devtools: Devtools({
-      host: "localhost:9999",
-      reconnect: true,
-      storeMutations: true,
-      bigComponentsWarning: 5,
-      warnStateProps: true
-    })
+    // devtools: Devtools({
+    //   host: "localhost:9999",
+    //   reconnect: true,
+    //   storeMutations: true,
+    //   bigComponentsWarning: 5,
+    //   warnStateProps: true
+    // })
   });
 }
 
