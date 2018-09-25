@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 120:
+/***/ 121:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,7 +13,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 120;
+webpackEmptyAsyncContext.id = 121;
 
 /***/ }),
 
@@ -79,9 +79,9 @@ var SimpleDrachtioRegistrarTabsPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleDrachtioRegistrarDialerPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_cerebral_tags__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_cerebral_tags__ = __webpack_require__(29);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -141,9 +141,9 @@ var SimpleDrachtioRegistrarDialerPage = /** @class */ (function (_super) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleDrachtioRegistrarSettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_cerebral_tags__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_cerebral_tags__ = __webpack_require__(29);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -197,13 +197,169 @@ var SimpleDrachtioRegistrarSettingsPage = /** @class */ (function (_super) {
 
 /***/ }),
 
+/***/ 216:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleDrachtioRegistrarInCallModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_cerebral_tags__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(62);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var SimpleDrachtioRegistrarInCallModalPage = /** @class */ (function (_super) {
+    __extends(SimpleDrachtioRegistrarInCallModalPage, _super);
+    function SimpleDrachtioRegistrarInCallModalPage(cdr, controller, viewCtrl) {
+        var _this = _super.call(this, cdr, controller) || this;
+        _this.cdr = cdr;
+        _this.controller = controller;
+        _this.viewCtrl = viewCtrl;
+        return _this;
+    }
+    SimpleDrachtioRegistrarInCallModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-simple-drachtio-registrar-in-call-modal",template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/simple-drachtio-registrar-in-call-modal/simple-drachtio-registrar-in-call-modal.html"*/'<ion-content padding>\n  <ion-grid>\n    <h1 ion-text color="primary">{{name}}</h1>\n    <h3 *ngIf="type === \'incoming\'" ion-text color="secondary">\n      {{ connected ? "Connected" : "Incoming Call" }}\n    </h3>\n    <h3 *ngIf="type === \'outgoing\'" ion-text color="secondary">\n      {{ connected ? "Connected" : "Outgoing Call" }}\n    </h3>\n  </ion-grid>\n</ion-content>\n\n<ion-footer no-border>\n\n  <ion-grid  *ngIf="!connected && type === \'incoming\'">\n    <ion-row>\n      <ion-col col-6>\n        <button (click)="answer()" color="primary" ion-button full large>\n          Answer\n        </button>\n      </ion-col>\n      <ion-col col-6>\n        <button (click)="hangup()" color="secondary" ion-button full large>\n          Hang-up\n        </button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <button *ngIf="connected || type === \'outgoing\'" (click)="hangup()" color="secondary" ion-button full large>\n    Hang-up\n  </button>\n</ion-footer>\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/simple-drachtio-registrar-in-call-modal/simple-drachtio-registrar-in-call-modal.html"*/,
+            changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* ChangeDetectionStrategy */].OnPush
+        }),
+        Object(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["connect"])({
+            name: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.name"]),
+            connected: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]),
+            type: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.type"]),
+            answer: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["simpleDrachtioRegistrar.answer"]),
+            hangup: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["simpleDrachtioRegistrar.hangup"]),
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"]) === "function" && _a || Object, __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* ViewController */]])
+    ], SimpleDrachtioRegistrarInCallModalPage);
+    return SimpleDrachtioRegistrarInCallModalPage;
+    var _a;
+}(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["CerebralComponent"]));
+
+//# sourceMappingURL=simple-drachtio-registrar-in-call-modal.js.map
+
+/***/ }),
+
 /***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return callSequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return registerSequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return unregisterSequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return onInvite; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return hangupSequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return answerSequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return onAccepted; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return onTerminated; });
+/* unused harmony export onBye */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return onRejected; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return onCancel; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral_operators__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral_tags__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions__ = __webpack_require__(333);
+
+
+
+var callSequence = [
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.type"]), "outgoing"),
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.name"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"])),
+    __WEBPACK_IMPORTED_MODULE_2__actions__["d" /* decideWhatToDo */],
+    {
+        setToCallWithLastRedialed: [
+            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.lastDialed"]))
+        ],
+        doNothing: [],
+        call: [
+            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.lastDialed"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"])),
+            __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* call */],
+            {
+                next: [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"]), "")],
+                error: [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"]), "")]
+            },
+            __WEBPACK_IMPORTED_MODULE_2__actions__["f" /* openInCallModal */],
+            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]), false)
+        ]
+    }
+];
+var registerSequence = [
+    __WEBPACK_IMPORTED_MODULE_2__actions__["i" /* shouldRegister */],
+    {
+        register: [
+            __WEBPACK_IMPORTED_MODULE_2__actions__["g" /* register */],
+            {
+                next: [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.registered"]), true)],
+                error: []
+            }
+        ]
+    }
+];
+var unregisterSequence = [__WEBPACK_IMPORTED_MODULE_2__actions__["j" /* unregister */]];
+var onInvite = [
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.type"]), "incoming"),
+    __WEBPACK_IMPORTED_MODULE_2__actions__["h" /* setCallName */],
+    __WEBPACK_IMPORTED_MODULE_2__actions__["f" /* openInCallModal */]
+];
+var hangupSequence = [
+    __WEBPACK_IMPORTED_MODULE_2__actions__["e" /* hangup */],
+    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */],
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]), false)
+];
+var answerSequence = [
+    __WEBPACK_IMPORTED_MODULE_2__actions__["a" /* answer */],
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]), true)
+];
+var onAccepted = [
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]), true)
+];
+var onTerminated = [
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]), false),
+    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */]
+];
+var onBye = [
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]), false),
+    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */]
+];
+var onRejected = [
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]), false),
+    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */]
+];
+var onCancel = [
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]), false),
+    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */]
+];
+//# sourceMappingURL=sequences.js.map
+
+/***/ }),
+
+/***/ 220:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(243);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -211,23 +367,24 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 241:
+/***/ 243:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__cerebral_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_simple_drachtio_registrar_tabs_simple_drachtio_registrar_tabs__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_simple_drachtio_registrar_dialer_simple_drachtio_registrar_dialer__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_simple_drachtio_registrar_settings_simple_drachtio_registrar_settings__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__cerebral__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_simple_drachtio_registrar_in_call_modal_simple_drachtio_registrar_in_call_modal__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__cerebral__ = __webpack_require__(311);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -245,8 +402,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-function configureController() {
-    return new __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__["ControllerService"](__WEBPACK_IMPORTED_MODULE_10__cerebral__["a" /* default */], {});
+
+function configureController(modal) {
+    var cerebral = Object(__WEBPACK_IMPORTED_MODULE_11__cerebral__["a" /* cerebralFactory */])(modal);
+    return new __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__["ControllerService"](cerebral, {});
 }
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -257,7 +416,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_simple_drachtio_registrar_tabs_simple_drachtio_registrar_tabs__["a" /* SimpleDrachtioRegistrarTabsPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_simple_drachtio_registrar_dialer_simple_drachtio_registrar_dialer__["a" /* SimpleDrachtioRegistrarDialerPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_simple_drachtio_registrar_settings_simple_drachtio_registrar_settings__["a" /* SimpleDrachtioRegistrarSettingsPage */]
+                __WEBPACK_IMPORTED_MODULE_9__pages_simple_drachtio_registrar_settings_simple_drachtio_registrar_settings__["a" /* SimpleDrachtioRegistrarSettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_simple_drachtio_registrar_in_call_modal_simple_drachtio_registrar_in_call_modal__["a" /* SimpleDrachtioRegistrarInCallModalPage */]
             ],
             imports: [__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: []
@@ -267,17 +427,18 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_simple_drachtio_registrar_tabs_simple_drachtio_registrar_tabs__["a" /* SimpleDrachtioRegistrarTabsPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_simple_drachtio_registrar_dialer_simple_drachtio_registrar_dialer__["a" /* SimpleDrachtioRegistrarDialerPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_simple_drachtio_registrar_settings_simple_drachtio_registrar_settings__["a" /* SimpleDrachtioRegistrarSettingsPage */]
+                __WEBPACK_IMPORTED_MODULE_9__pages_simple_drachtio_registrar_settings_simple_drachtio_registrar_settings__["a" /* SimpleDrachtioRegistrarSettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_simple_drachtio_registrar_in_call_modal_simple_drachtio_registrar_in_call_modal__["a" /* SimpleDrachtioRegistrarInCallModalPage */]
             ],
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__["ControllerService"],
                     useFactory: configureController,
-                    deps: []
+                    deps: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* ModalController */]]
                 },
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
             ]
         })
     ], AppModule);
@@ -288,13 +449,13 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 308:
+/***/ 310:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_simple_drachtio_registrar_tabs_simple_drachtio_registrar_tabs__ = __webpack_require__(213);
@@ -325,7 +486,7 @@ var MyApp = /** @class */ (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/app/app.html"*/'<ion-menu [content]="mycontent">\n\n  <ion-header>\n    <ion-toolbar color="secondary">\n      <ion-title>Apps</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item detail-none>\n        simple-drachtio-registrar\n      </button>\n      <button ion-item detail-none>\n        drachtio-simple-server (WIP)\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav #mycontent [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -334,69 +495,77 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 309:
+/***/ 311:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cerebral_storage__ = __webpack_require__(310);
+/* harmony export (immutable) */ __webpack_exports__["a"] = cerebralFactory;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cerebral_storage__ = __webpack_require__(312);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cerebral_storage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cerebral_storage__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__simple_drachtio_registrar__ = __webpack_require__(312);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_Sip__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__simple_drachtio_registrar__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_Sip__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_Modal__ = __webpack_require__(336);
 
 
 
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_cerebral__["Module"])({
-    catch: [],
-    providers: {
-        sip: Object(__WEBPACK_IMPORTED_MODULE_3__providers_Sip__["a" /* default */])({
-            onAccepted: [],
-            onRejected: [],
-            onFailed: [],
-            onConnecting: [],
-            onTerminated: [],
-            onCancel: [],
-            onRefer: [],
-            onBye: [],
-            onProgress: [],
-            onDtmf: [],
-            // onMuted: [],
-            // onUnmuted: [],
-            onInfo: [],
-            onInvite: []
-        })
-    },
-    signals: {
-        saveInput: [
-            function saveInput(_a) {
-                var props = _a.props, state = _a.state;
-                state.set(props.target, props.value);
-            }
-        ]
-    },
-    modules: {
-        simpleDrachtioRegistrar: __WEBPACK_IMPORTED_MODULE_2__simple_drachtio_registrar__["a" /* default */],
-        storage: __WEBPACK_IMPORTED_MODULE_0__cerebral_storage___default()({
-            target: localStorage,
-            json: true,
-            sync: {
-                "simpleDrachtioRegistrar.settings": "simpleDrachtioRegistrar.settings",
-                "simpleDrachtioRegistrar.lastDialed": "simpleDrachtioRegistrar.lastDialed"
-            }
-        })
-    }
-}));
+
+
+function cerebralFactory(modal) {
+    return Object(__WEBPACK_IMPORTED_MODULE_1_cerebral__["Module"])({
+        catch: [],
+        providers: {
+            modal: Object(__WEBPACK_IMPORTED_MODULE_5__providers_Modal__["a" /* default */])(modal),
+            sip: Object(__WEBPACK_IMPORTED_MODULE_3__providers_Sip__["a" /* default */])({
+                onAccepted: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["d" /* onAccepted */],
+                onRejected: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["g" /* onRejected */],
+                onFailed: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["e" /* onCancel */],
+                onConnecting: [],
+                onTerminated: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["h" /* onTerminated */],
+                onCancel: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["e" /* onCancel */],
+                onRefer: [],
+                onBye: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["e" /* onCancel */],
+                onProgress: [],
+                onDtmf: [],
+                // onMuted: [],
+                // onUnmuted: [],
+                onInfo: [],
+                onInvite: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["f" /* onInvite */]
+            })
+        },
+        signals: {
+            saveInput: [
+                function saveInput(_a) {
+                    var props = _a.props, state = _a.state;
+                    state.set(props.target, props.value);
+                }
+            ]
+        },
+        modules: {
+            simpleDrachtioRegistrar: __WEBPACK_IMPORTED_MODULE_2__simple_drachtio_registrar__["a" /* default */],
+            storage: __WEBPACK_IMPORTED_MODULE_0__cerebral_storage___default()({
+                target: localStorage,
+                json: true,
+                sync: {
+                    "simpleDrachtioRegistrar.settings": "simpleDrachtioRegistrar.settings",
+                    "simpleDrachtioRegistrar.lastDialed": "simpleDrachtioRegistrar.lastDialed"
+                }
+            })
+        }
+    });
+}
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 312:
+/***/ 314:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sequences__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sequences__ = __webpack_require__(218);
 
 
 var urlParams = new URLSearchParams(window.location.search);
@@ -412,78 +581,41 @@ var username = urlParams.get('username');
         lastDialed: "",
         toCall: "",
         registered: false,
-        username: username || ''
+        username: username || '',
+        call: {
+            type: "",
+            name: "",
+            connected: false
+        }
     },
     signals: {
-        call: __WEBPACK_IMPORTED_MODULE_1__sequences__["a" /* callSequence */],
-        register: __WEBPACK_IMPORTED_MODULE_1__sequences__["b" /* registerSequence */],
-        unregister: __WEBPACK_IMPORTED_MODULE_1__sequences__["c" /* unregisterSequence */]
+        call: __WEBPACK_IMPORTED_MODULE_1__sequences__["b" /* callSequence */],
+        register: __WEBPACK_IMPORTED_MODULE_1__sequences__["i" /* registerSequence */],
+        unregister: __WEBPACK_IMPORTED_MODULE_1__sequences__["j" /* unregisterSequence */],
+        hangup: __WEBPACK_IMPORTED_MODULE_1__sequences__["c" /* hangupSequence */],
+        answer: __WEBPACK_IMPORTED_MODULE_1__sequences__["a" /* answerSequence */]
     },
 }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 313:
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return callSequence; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerSequence; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return unregisterSequence; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral_operators__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral_tags__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions__ = __webpack_require__(332);
+/* harmony export (immutable) */ __webpack_exports__["g"] = register;
+/* harmony export (immutable) */ __webpack_exports__["j"] = unregister;
+/* harmony export (immutable) */ __webpack_exports__["b"] = call;
+/* harmony export (immutable) */ __webpack_exports__["d"] = decideWhatToDo;
+/* harmony export (immutable) */ __webpack_exports__["i"] = shouldRegister;
+/* harmony export (immutable) */ __webpack_exports__["f"] = openInCallModal;
+/* harmony export (immutable) */ __webpack_exports__["h"] = setCallName;
+/* harmony export (immutable) */ __webpack_exports__["a"] = answer;
+/* harmony export (immutable) */ __webpack_exports__["e"] = hangup;
+/* harmony export (immutable) */ __webpack_exports__["c"] = closeModal;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_simple_drachtio_registrar_in_call_modal_simple_drachtio_registrar_in_call_modal__ = __webpack_require__(216);
 
-
-
-var callSequence = [
-    __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* decideWhatToDo */],
-    {
-        setToCallWithLastRedialed: [
-            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.lastDialed"]))
-        ],
-        doNothing: [],
-        call: [
-            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.lastDialed"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"])),
-            __WEBPACK_IMPORTED_MODULE_2__actions__["a" /* call */],
-            {
-                next: [
-                    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"]), ""),
-                ],
-                error: [
-                    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"]), ""),
-                ]
-            }
-        ]
-    }
-];
-var registerSequence = [
-    __WEBPACK_IMPORTED_MODULE_2__actions__["d" /* shouldRegister */],
-    {
-        register: [
-            __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* register */],
-            {
-                next: [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.registered"]), true)],
-                error: []
-            }
-        ]
-    }
-];
-var unregisterSequence = [__WEBPACK_IMPORTED_MODULE_2__actions__["e" /* unregister */]];
-//# sourceMappingURL=sequences.js.map
-
-/***/ }),
-
-/***/ 332:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["c"] = register;
-/* harmony export (immutable) */ __webpack_exports__["e"] = unregister;
-/* harmony export (immutable) */ __webpack_exports__["a"] = call;
-/* harmony export (immutable) */ __webpack_exports__["b"] = decideWhatToDo;
-/* harmony export (immutable) */ __webpack_exports__["d"] = shouldRegister;
 function register(_a) {
     var sip = _a.sip, state = _a.state, path = _a.path;
     return new Promise(function (resolve, reject) {
@@ -549,18 +681,55 @@ function shouldRegister(_a) {
     var path = _a.path;
     return path.register();
 }
+function openInCallModal(_a) {
+    var modal = _a.modal;
+    modal.create(__WEBPACK_IMPORTED_MODULE_0__pages_simple_drachtio_registrar_in_call_modal_simple_drachtio_registrar_in_call_modal__["a" /* SimpleDrachtioRegistrarInCallModalPage */]);
+}
+function setCallName(_a) {
+    var state = _a.state, props = _a.props;
+    state.set("simpleDrachtioRegistrar.call.name", props.name.split("@")[0] || "Unknown");
+}
+function answer(_a) {
+    var sip = _a.sip;
+    sip.answer();
+}
+function hangup(_a) {
+    var sip = _a.sip, state = _a.state;
+    var type = state.get("simpleDrachtioRegistrar.call.type");
+    var connected = state.get("simpleDrachtioRegistrar.call.connected");
+    if (type === "incoming") {
+        if (!connected) {
+            sip.reject();
+        }
+        else {
+            sip.hangup();
+        }
+    }
+    else {
+        if (connected) {
+            sip.hangup();
+        }
+        else {
+            sip.cancel();
+        }
+    }
+}
+function closeModal(_a) {
+    var modal = _a.modal;
+    modal.close();
+}
 //# sourceMappingURL=actions.js.map
 
 /***/ }),
 
-/***/ 333:
+/***/ 334:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = Sip;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sip_js__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sip_js__ = __webpack_require__(335);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sip_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sip_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(21);
 
 var EVENT_NAMES_TO_SIGNAL = [
     { event: "accepted", sequence: "onAccepted" },
@@ -583,7 +752,7 @@ function Sip(_a) {
     // onUnmuted,
     onInfo = _a.onInfo, onInvite = _a.onInvite;
     var ua;
-    var sessions = {};
+    var session;
     var sequences = {
         onAccepted: onAccepted,
         onRejected: onRejected,
@@ -628,9 +797,35 @@ function Sip(_a) {
                 console.log("disconnected");
                 cb("disconnected");
             });
-            ua.transport.on("invite", function (session) {
-                session.accept();
-                _this.context.controller.runSignal("onInvite", onInvite);
+            ua.on("invite", function (sess) {
+                session = sess;
+                session.on("cancel", function () {
+                    _this.context.controller.runSignal("onCancel", onCancel);
+                });
+                session.on("terminate", function () {
+                    _this.context.controller.runSignal("onTerminated", onTerminated);
+                });
+                session.on("bye", function () {
+                    _this.context.controller.runSignal("onBye", onBye);
+                });
+                _this.context.controller.runSignal("onInvite", onInvite, {
+                    name: session.request.from.displayName ||
+                        session.request.from.friendlyName
+                });
+            });
+        },
+        attachEvents: function (session, controller) {
+            EVENT_NAMES_TO_SIGNAL.map(function (action) {
+                session.on(action.event, function (response, cause) {
+                    controller.runSignal(action.event, sequences[action.sequence], {
+                        response: response && response.method === "BYE"
+                            ? ""
+                            : response && response.data
+                                ? response.data
+                                : "",
+                        cause: cause || ""
+                    });
+                });
             });
         },
         unregister: function () {
@@ -638,59 +833,105 @@ function Sip(_a) {
                 ua.unregister();
             }
         },
-        invite: function (target, options, cb) {
+        answer: function () {
             try {
-                var session_1 = ua.invite(target, options);
-                var call_id = session_1.request.call_id;
-                session_1.target = target;
-                sessions[call_id] = session_1;
-                var controller_1 = this.context.controller;
-                session_1.onInfo = function (request) {
-                    return controller_1.runSignal("onInfo", onInfo, { request: request });
+                session.accept();
+            }
+            catch (error) {
+                console.log("error answering");
+            }
+        },
+        invite: function (target, options, cb) {
+            var _this = this;
+            try {
+                var sess = ua.invite(target, options);
+                var call_id = sess.request.call_id;
+                session = sess;
+                this.attachEvents(session, this.context.controller);
+                session.onInfo = function (request) {
+                    return _this.context.controller.runSignal("onInfo", onInfo, { request: request });
                 };
-                session_1.on("trackAdded", function () {
+                session.on("trackAdded", function () {
                     var remoteAudio = document.getElementById("remoteAudio");
-                    var pc = session_1.sessionDescriptionHandler.peerConnection;
+                    var pc = session.sessionDescriptionHandler.peerConnection;
                     var remoteStream;
                     remoteStream = pc.getRemoteStreams()[0];
                     remoteAudio.srcObject = remoteStream;
                     remoteAudio.volume = 1;
                     remoteAudio.play();
                 });
-                EVENT_NAMES_TO_SIGNAL.map(function (action) {
-                    session_1.on(action.event, function (response, cause) {
-                        controller_1.runSignal(action.event, sequences[action.sequence], {
-                            response: response && response.method === "BYE"
-                                ? ""
-                                : response && response.data
-                                    ? response.data
-                                    : "",
-                            cause: cause || ""
-                        });
-                    });
-                });
                 cb(null, call_id);
             }
             catch (error) {
                 console.log(error);
-                cb("error: " + error);
+                cb("error invite");
             }
         },
-        terminate: function (call_id, cb) {
+        hangup: function () {
             try {
-                var session = sessions[call_id];
-                session.terminate();
-                cb();
+                session.bye();
             }
             catch (error) {
-                cb(error);
+                console.log("error hanging up");
+            }
+        },
+        reject: function () {
+            try {
+                session.reject();
+            }
+            catch (error) {
+                console.log("error rejecting");
+            }
+        },
+        cancel: function () {
+            try {
+                session.cancel();
+            }
+            catch (error) {
+                console.log("error cancelling", error);
             }
         }
     });
 }
 //# sourceMappingURL=Sip.js.map
 
+/***/ }),
+
+/***/ 336:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = Modal;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral__ = __webpack_require__(21);
+
+function Modal(modal) {
+    var modalInstance;
+    return Object(__WEBPACK_IMPORTED_MODULE_0_cerebral__["Provider"])({
+        create: function (modalPage) {
+            if (!modalInstance) {
+                modalInstance = modal.create(modalPage);
+                modalInstance.present();
+            }
+        },
+        close: function () {
+            if (modalInstance) {
+                modalInstance
+                    .dismiss()
+                    .then(function (error) {
+                    console.log(error);
+                    modalInstance = null;
+                })
+                    .catch(function (error) {
+                    console.log(error);
+                    modalInstance = null;
+                });
+            }
+        }
+    });
+}
+//# sourceMappingURL=Modal.js.map
+
 /***/ })
 
-},[218]);
+},[220]);
 //# sourceMappingURL=main.js.map
