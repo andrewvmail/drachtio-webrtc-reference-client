@@ -18,7 +18,6 @@ set username using the auth username in the settings option
 https://andrewvmail.github.io/drachtio-webrtc-reference-client
 
 ## Todo
-- drachtio-sip-registrar: in call modals
 - drachtio-simple-server
 - ios and android builds
 
