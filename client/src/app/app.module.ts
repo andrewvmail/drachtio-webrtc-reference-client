@@ -1,6 +1,11 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { ErrorHandler, NgModule } from "@angular/core";
-import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
+import {
+  IonicApp,
+  IonicErrorHandler,
+  IonicModule,
+  ModalController
+} from "ionic-angular";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 
@@ -10,19 +15,22 @@ import { MyApp } from "./app.component";
 import { SimpleDrachtioRegistrarTabsPage } from "../pages/simple-drachtio-registrar-tabs/simple-drachtio-registrar-tabs";
 import { SimpleDrachtioRegistrarDialerPage } from "../pages/simple-drachtio-registrar-dialer/simple-drachtio-registrar-dialer";
 import { SimpleDrachtioRegistrarSettingsPage } from "../pages/simple-drachtio-registrar-settings/simple-drachtio-registrar-settings";
+import { SimpleDrachtioRegistrarInCallModalPage } from "../pages/simple-drachtio-registrar-in-call-modal/simple-drachtio-registrar-in-call-modal";
 
-import cerebral from "../cerebral";
+import cerebral, { cerebralFactory } from "../cerebral";
 import Devtools from "cerebral/devtools";
 
-function configureController() {
+function configureController(modal: ModalController) {
+  const cerebral = cerebralFactory(modal);
+
   return new ControllerService(cerebral, {
-    // devtools: Devtools({
-    //   host: "localhost:9999",
-    //   reconnect: true,
-    //   storeMutations: true,
-    //   bigComponentsWarning: 5,
-    //   warnStateProps: true
-    // }),
+    devtools: Devtools({
+      host: "localhost:9999",
+      reconnect: true,
+      storeMutations: true,
+      bigComponentsWarning: 5,
+      warnStateProps: true
+    })
   });
 }
 
@@ -31,7 +39,8 @@ function configureController() {
     MyApp,
     SimpleDrachtioRegistrarTabsPage,
     SimpleDrachtioRegistrarDialerPage,
-    SimpleDrachtioRegistrarSettingsPage
+    SimpleDrachtioRegistrarSettingsPage,
+    SimpleDrachtioRegistrarInCallModalPage
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -39,17 +48,18 @@ function configureController() {
     MyApp,
     SimpleDrachtioRegistrarTabsPage,
     SimpleDrachtioRegistrarDialerPage,
-    SimpleDrachtioRegistrarSettingsPage
+    SimpleDrachtioRegistrarSettingsPage,
+    SimpleDrachtioRegistrarInCallModalPage
   ],
   providers: [
     {
       provide: ControllerService,
       useFactory: configureController,
-      deps: []
+      deps: [ModalController]
     },
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
 export class AppModule {}

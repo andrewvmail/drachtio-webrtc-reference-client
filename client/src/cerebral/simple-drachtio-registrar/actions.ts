@@ -1,3 +1,5 @@
+import { SimpleDrachtioRegistrarInCallModalPage } from "../../pages/simple-drachtio-registrar-in-call-modal/simple-drachtio-registrar-in-call-modal";
+
 export function register({ sip, state, path }) {
   return new Promise((resolve, reject) => {
     const server = state.get("simpleDrachtioRegistrar.settings.server");
@@ -70,4 +72,41 @@ export function decideWhatToDo({ state, path }) {
 
 export function shouldRegister({ path }) {
   return path.register();
+}
+
+export function openInCallModal({ modal }) {
+  modal.create(SimpleDrachtioRegistrarInCallModalPage);
+}
+
+export function setCallName({ state, props }) {
+  state.set(
+    "simpleDrachtioRegistrar.call.name",
+    props.name.split("@")[0] || "Unknown"
+  );
+}
+
+export function answer({ sip }) {
+  sip.answer();
+}
+
+export function hangup({ sip, state }) {
+  const type = state.get("simpleDrachtioRegistrar.call.type");
+  const connected = state.get("simpleDrachtioRegistrar.call.connected");
+  if (type === "incoming") {
+    if (!connected) {
+      sip.reject();
+    } else {
+      sip.hangup();
+    }
+  } else {
+    if (connected) {
+      sip.hangup();
+    } else {
+      sip.cancel();
+    }
+  }
+}
+
+export function closeModal({ modal }) {
+  modal.close();
 }

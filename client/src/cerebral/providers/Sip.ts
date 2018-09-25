@@ -34,7 +34,7 @@ export default function Sip({
   onInvite
 }) {
   let ua;
-  let sessions = {};
+  let session;
 
   const sequences = {
     onAccepted,
@@ -79,29 +79,65 @@ export default function Sip({
         console.log("disconnected");
         cb("disconnected");
       });
-      ua.transport.on("invite", (session) => {
-        session.accept()
-        this.context.controller.runSignal("onInvite", onInvite);
+      ua.on("invite", sess => {
+        session = sess;
+
+        session.on("cancel", () => {
+          this.context.controller.runSignal("onCancel", onCancel);
+        });
+        session.on("terminate", () => {
+          this.context.controller.runSignal("onTerminated", onTerminated);
+        });
+        session.on("bye", () => {
+          this.context.controller.runSignal("onBye", onBye);
+        });
+
+        this.context.controller.runSignal("onInvite", onInvite, {
+          name:
+            session.request.from.displayName ||
+            session.request.from.friendlyName
+        });
+      });
+    },
+    attachEvents(session, controller) {
+      EVENT_NAMES_TO_SIGNAL.map((action: any) => {
+        session.on(action.event, (response, cause) => {
+          controller.runSignal(action.event, sequences[action.sequence], {
+            response:
+              response && response.method === "BYE"
+                ? ""
+                : response && response.data
+                  ? response.data
+                  : "",
+            cause: cause || ""
+          });
+        });
       });
     },
     unregister() {
-      if(ua.isRegistered()) {
-        ua.unregister()
+      if (ua.isRegistered()) {
+        ua.unregister();
+      }
+    },
+    answer() {
+      try {
+        session.accept();
+      } catch (error) {
+        console.log("error answering");
       }
     },
     invite(target, options, cb) {
       try {
-        let session = ua.invite(target, options);
+        let sess = ua.invite(target, options);
 
-        const call_id = session.request.call_id;
+        const call_id = sess.request.call_id;
 
-        session.target = target;
-        sessions[call_id] = session;
+        session = sess;
 
-        const { controller } = this.context;
+        this.attachEvents(session, this.context.controller);
 
         session.onInfo = request =>
-          controller.runSignal("onInfo", onInfo, { request });
+          this.context.controller.runSignal("onInfo", onInfo, { request });
 
         session.on("trackAdded", function() {
           var remoteAudio: any = document.getElementById("remoteAudio");
@@ -116,33 +152,31 @@ export default function Sip({
           remoteAudio.play();
         });
 
-        EVENT_NAMES_TO_SIGNAL.map((action: any) => {
-          session.on(action.event, (response, cause) => {
-            controller.runSignal(action.event, sequences[action.sequence], {
-              response:
-                response && response.method === "BYE"
-                  ? ""
-                  : response && response.data
-                    ? response.data
-                    : "",
-              cause: cause || ""
-            });
-          });
-        });
-
         cb(null, call_id);
       } catch (error) {
         console.log(error);
-        cb("error: " + error);
+        cb("error invite");
       }
     },
-    terminate(call_id, cb) {
+    hangup() {
       try {
-        const session = sessions[call_id];
-        session.terminate();
-        cb();
+        session.bye();
       } catch (error) {
-        cb(error);
+        console.log("error hanging up");
+      }
+    },
+    reject() {
+      try {
+        session.reject();
+      } catch (error) {
+        console.log("error rejecting");
+      }
+    },
+    cancel() {
+      try {
+        session.cancel();
+      } catch (error) {
+        console.log("error cancelling", error);
       }
     }
   });

@@ -17,12 +17,19 @@ export default Module({
     lastDialed: "",
     toCall: "",
     registered: false,
-    username: username || ''
+    username: username || '',
+    call: {
+      type: "",
+      name: "",
+      connected: false
+    }
   },
   signals: {
     call: sequences.callSequence,
     register: sequences.registerSequence,
-    unregister: sequences.unregisterSequence
+    unregister: sequences.unregisterSequence,
+    hangup: sequences.hangupSequence,
+    answer: sequences.answerSequence
   },
 })
 

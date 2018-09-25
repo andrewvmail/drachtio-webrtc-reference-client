@@ -1,0 +1,33 @@
+<ion-content padding>
+  <ion-grid>
+    <h1 ion-text color="primary">{{name}}</h1>
+    <h3 *ngIf="type === 'incoming'" ion-text color="secondary">
+      {{ connected ? "Connected" : "Incoming Call" }}
+    </h3>
+    <h3 *ngIf="type === 'outgoing'" ion-text color="secondary">
+      {{ connected ? "Connected" : "Outgoing Call" }}
+    </h3>
+  </ion-grid>
+</ion-content>
+
+<ion-footer no-border>
+
+  <ion-grid  *ngIf="!connected && type === 'incoming'">
+    <ion-row>
+      <ion-col col-6>
+        <button (click)="answer()" color="primary" ion-button full large>
+          Answer
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button (click)="hangup()" color="secondary" ion-button full large>
+          Hang-up
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <button *ngIf="connected || type === 'outgoing'" (click)="hangup()" color="secondary" ion-button full large>
+    Hang-up
+  </button>
+</ion-footer>
