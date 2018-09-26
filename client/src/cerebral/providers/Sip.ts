@@ -24,6 +24,7 @@ export default function Sip({
   onConnecting,
   onTerminated,
   onCancel,
+  onRegistrationFailed,
   onRefer,
   onBye,
   onProgress,
@@ -78,6 +79,12 @@ export default function Sip({
       ua.transport.on("disconnected", disc => {
         console.log("disconnected");
         cb("disconnected");
+      });
+      ua.on("registrationFailed", (response, cause) => {
+        this.context.controller.runSignal(
+          "onRegistrationFailed",
+          onRegistrationFailed
+        );
       });
       ua.on("invite", sess => {
         session = sess;

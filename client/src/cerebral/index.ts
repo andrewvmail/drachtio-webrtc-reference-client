@@ -2,7 +2,7 @@ import StorageModule from "@cerebral/storage";
 import { Module } from "cerebral";
 import SimpleDrachtioRegistrar from "./simple-drachtio-registrar";
 import Sip from "./providers/Sip";
-import { onAccepted, onCancel, onInvite, onRejected, onTerminated } from './simple-drachtio-registrar/sequences'
+import { onAccepted, onCancel, onInvite, onRejected, onTerminated, onRegistrationFailed } from './simple-drachtio-registrar/sequences'
 import Modal from './providers/Modal'
 
 export function cerebralFactory(modal) {
@@ -17,6 +17,7 @@ export function cerebralFactory(modal) {
         onConnecting: [],
         onTerminated,
         onCancel,
+        onRegistrationFailed,
         onRefer: [],
         onBye: onCancel,
         onProgress: [],

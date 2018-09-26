@@ -4,7 +4,7 @@
     <button ion-button menuToggle left>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>simple-drachtio-registrar</ion-title>
+    <ion-title>{{registered ? 'Registered as ' + (name || authUsername) : 'Not Registered' }}</ion-title>
   </ion-navbar>
 
 </ion-header>

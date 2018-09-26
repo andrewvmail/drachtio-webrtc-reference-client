@@ -100,3 +100,7 @@ export const onCancel = [
   set(state(["simpleDrachtioRegistrar.call.connected"]), false),
   closeModal
 ];
+
+export const onRegistrationFailed = [
+  set(state(["simpleDrachtioRegistrar.registered"]), false),
+]

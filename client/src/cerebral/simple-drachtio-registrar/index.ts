@@ -29,7 +29,8 @@ export default Module({
     register: sequences.registerSequence,
     unregister: sequences.unregisterSequence,
     hangup: sequences.hangupSequence,
-    answer: sequences.answerSequence
+    answer: sequences.answerSequence,
+    onRegistrationFailed: sequences.onRegistrationFailed
   },
 })
 

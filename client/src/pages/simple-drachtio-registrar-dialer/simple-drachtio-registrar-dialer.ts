@@ -16,14 +16,16 @@ import { state, signal } from "cerebral/tags";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 @connect({
+  name: state(["simpleDrachtioRegistrar.username"]),
+  authUsername: state(["simpleDrachtioRegistrar.settings.username"]),
   toCall: state(["simpleDrachtioRegistrar.toCall"]),
   registered: state(["simpleDrachtioRegistrar.registered"]),
   call: signal(["simpleDrachtioRegistrar.call"]),
   register: signal(["simpleDrachtioRegistrar.register"]),
   unregister: signal(["simpleDrachtioRegistrar.unregister"]),
-  saveInput: signal(["saveInput"]),
+  saveInput: signal(["saveInput"])
 })
-export class SimpleDrachtioRegistrarDialerPage extends CerebralComponent{
+export class SimpleDrachtioRegistrarDialerPage extends CerebralComponent {
   constructor(
     public cdr: ChangeDetectorRef,
     public controller: ControllerService
