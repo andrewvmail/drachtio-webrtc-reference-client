@@ -114,16 +114,18 @@ var SimpleDrachtioRegistrarDialerPage = /** @class */ (function (_super) {
     }
     SimpleDrachtioRegistrarDialerPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-simple-drachtio-registrar-dialer",template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/simple-drachtio-registrar-dialer/simple-drachtio-registrar-dialer.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>simple-drachtio-registrar</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="outer-content">\n    <audio id="remoteAudio"></audio>\n\n    <ion-item>\n      <ion-input class="text--large" type="text" value="{{toCall}}" placeholder="Enter a number or name"\n                 (blur)="saveInput({target: \'simpleDrachtioRegistrar.toCall\', value: $event.target.value})"\n      ></ion-input>\n    </ion-item>\n\n</ion-content>\n\n<ion-footer no-border>\n  <button class="btn--no-border" color="secondary" full large ion-button item-end\n          (click)="registered ? unregister() : register()"\n  >\n    {{registered ? \'Unregister\' : \'Register\' }}\n  </button>\n  <button class="btn--no-border" full large ion-button item-end (click)="call()">Call</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/simple-drachtio-registrar-dialer/simple-drachtio-registrar-dialer.html"*/,
+            selector: "page-simple-drachtio-registrar-dialer",template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/simple-drachtio-registrar-dialer/simple-drachtio-registrar-dialer.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{registered ? \'Registered as \' + (name || authUsername) : \'Not Registered\' }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="outer-content">\n    <audio id="remoteAudio"></audio>\n\n    <ion-item>\n      <ion-input class="text--large" type="text" value="{{toCall}}" placeholder="Enter a number or name"\n                 (blur)="saveInput({target: \'simpleDrachtioRegistrar.toCall\', value: $event.target.value})"\n      ></ion-input>\n    </ion-item>\n\n</ion-content>\n\n<ion-footer no-border>\n  <button class="btn--no-border" color="secondary" full large ion-button item-end\n          (click)="registered ? unregister() : register()"\n  >\n    {{registered ? \'Unregister\' : \'Register\' }}\n  </button>\n  <button class="btn--no-border" full large ion-button item-end (click)="call()">Call</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/simple-drachtio-registrar-dialer/simple-drachtio-registrar-dialer.html"*/,
             changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* ChangeDetectionStrategy */].OnPush
         }),
         Object(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["connect"])({
+            name: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.username"]),
+            authUsername: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.settings.username"]),
             toCall: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.toCall"]),
             registered: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.registered"]),
             call: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["simpleDrachtioRegistrar.call"]),
             register: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["simpleDrachtioRegistrar.register"]),
             unregister: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["simpleDrachtioRegistrar.unregister"]),
-            saveInput: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["saveInput"]),
+            saveInput: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["saveInput"])
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"]) === "function" && _a || Object])
     ], SimpleDrachtioRegistrarDialerPage);
@@ -266,16 +268,17 @@ var SimpleDrachtioRegistrarInCallModalPage = /** @class */ (function (_super) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return callSequence; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return registerSequence; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return unregisterSequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return registerSequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return unregisterSequence; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return onInvite; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return hangupSequence; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return answerSequence; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return onAccepted; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return onTerminated; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return onTerminated; });
 /* unused harmony export onBye */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return onRejected; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return onRejected; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return onCancel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return onRegistrationFailed; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral_operators__ = __webpack_require__(315);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral_tags__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions__ = __webpack_require__(333);
@@ -348,6 +351,9 @@ var onRejected = [
 var onCancel = [
     Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]), false),
     __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */]
+];
+var onRegistrationFailed = [
+    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.registered"]), false),
 ];
 //# sourceMappingURL=sequences.js.map
 
@@ -520,11 +526,12 @@ function cerebralFactory(modal) {
             modal: Object(__WEBPACK_IMPORTED_MODULE_5__providers_Modal__["a" /* default */])(modal),
             sip: Object(__WEBPACK_IMPORTED_MODULE_3__providers_Sip__["a" /* default */])({
                 onAccepted: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["d" /* onAccepted */],
-                onRejected: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["g" /* onRejected */],
+                onRejected: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["h" /* onRejected */],
                 onFailed: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["e" /* onCancel */],
                 onConnecting: [],
-                onTerminated: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["h" /* onTerminated */],
+                onTerminated: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["i" /* onTerminated */],
                 onCancel: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["e" /* onCancel */],
+                onRegistrationFailed: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["g" /* onRegistrationFailed */],
                 onRefer: [],
                 onBye: __WEBPACK_IMPORTED_MODULE_4__simple_drachtio_registrar_sequences__["e" /* onCancel */],
                 onProgress: [],
@@ -590,10 +597,11 @@ var username = urlParams.get('username');
     },
     signals: {
         call: __WEBPACK_IMPORTED_MODULE_1__sequences__["b" /* callSequence */],
-        register: __WEBPACK_IMPORTED_MODULE_1__sequences__["i" /* registerSequence */],
-        unregister: __WEBPACK_IMPORTED_MODULE_1__sequences__["j" /* unregisterSequence */],
+        register: __WEBPACK_IMPORTED_MODULE_1__sequences__["j" /* registerSequence */],
+        unregister: __WEBPACK_IMPORTED_MODULE_1__sequences__["k" /* unregisterSequence */],
         hangup: __WEBPACK_IMPORTED_MODULE_1__sequences__["c" /* hangupSequence */],
-        answer: __WEBPACK_IMPORTED_MODULE_1__sequences__["a" /* answerSequence */]
+        answer: __WEBPACK_IMPORTED_MODULE_1__sequences__["a" /* answerSequence */],
+        onRegistrationFailed: __WEBPACK_IMPORTED_MODULE_1__sequences__["g" /* onRegistrationFailed */]
     },
 }));
 //# sourceMappingURL=index.js.map
@@ -747,7 +755,7 @@ var EVENT_NAMES_TO_SIGNAL = [
 ];
 
 function Sip(_a) {
-    var onAccepted = _a.onAccepted, onRejected = _a.onRejected, onFailed = _a.onFailed, onConnecting = _a.onConnecting, onTerminated = _a.onTerminated, onCancel = _a.onCancel, onRefer = _a.onRefer, onBye = _a.onBye, onProgress = _a.onProgress, onDtmf = _a.onDtmf, 
+    var onAccepted = _a.onAccepted, onRejected = _a.onRejected, onFailed = _a.onFailed, onConnecting = _a.onConnecting, onTerminated = _a.onTerminated, onCancel = _a.onCancel, onRegistrationFailed = _a.onRegistrationFailed, onRefer = _a.onRefer, onBye = _a.onBye, onProgress = _a.onProgress, onDtmf = _a.onDtmf, 
     // onMuted,
     // onUnmuted,
     onInfo = _a.onInfo, onInvite = _a.onInvite;
@@ -796,6 +804,9 @@ function Sip(_a) {
             ua.transport.on("disconnected", function (disc) {
                 console.log("disconnected");
                 cb("disconnected");
+            });
+            ua.on("registrationFailed", function (response, cause) {
+                _this.context.controller.runSignal("onRegistrationFailed", onRegistrationFailed);
             });
             ua.on("invite", function (sess) {
                 session = sess;
