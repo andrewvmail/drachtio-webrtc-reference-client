@@ -7,19 +7,28 @@ This application is built with
 - Cerebral.js for state management and control flow
 
 ## To run the client
-
-Open your web browser to :
+Open your web browser to:
 https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=bob
 https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=mary
+Without the username url parameter client will user auth username from config
 
-# To run simple-drachtio-registrar node app
+## To build and run the client locally
+```
+npm install -g ionic
+git clone https://github.com/andrewvmail/drachtio-webrtc-reference-client
+cd drachtio-webrtc-reference-client
+npm install 
+ionic serve
+```
+
+## To run simple-drachtio-registrar
 ```
 git clone https://github.com/davehorton/simple-drachtio-registrar
 cd simple-drachtio-registrar
 node app.js
 ```
 
-# To run drachtio-simple-server node app
+## To run drachtio-simple-server
 ```
 git clone https://github.com/davehorton/drachtio-simple-server
 cd drachtio-simple-server
@@ -30,7 +39,7 @@ cp config/default.json.example config/default.json
 npm start
 ```
 
-# To build and run drachtio
+## To build and run drachtio
 See https://github.com/davehorton/drachtio-server/tree/develop
 
 ## Todo
