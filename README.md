@@ -7,10 +7,10 @@ This application is built with
 - Cerebral.js for state management and control flow
 
 ## To run the client
-Open your web browser to:
-https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=bob
-https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=mary
-Without the username url parameter client will user auth username from config
+Open your web browser to:<br>
+https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=bob<br>
+https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=mary<br>
+Without the username url parameter client will user auth username from config<br>
 
 ## To build and run the client locally
 ```
