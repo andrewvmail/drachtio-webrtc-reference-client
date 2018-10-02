@@ -8,14 +8,30 @@ This application is built with
 
 ## To run the client
 
-set username as bob
+Open your web browser to :
 https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=bob
-
-set username as mary
 https://andrewvmail.github.io/drachtio-webrtc-reference-client/?username=mary
 
-set username using the auth username in the settings option
-https://andrewvmail.github.io/drachtio-webrtc-reference-client
+# To run simple-drachtio-registrar node app
+```
+git clone https://github.com/davehorton/simple-drachtio-registrar
+cd simple-drachtio-registrar
+node app.js
+```
+
+# To run drachtio-simple-server node app
+```
+git clone https://github.com/davehorton/drachtio-simple-server
+cd drachtio-simple-server
+npm install
+cp config/default.json.example config/default.json
+./lib/plugins/authenticate-test.js ./lib/plugins/your-authenticator-here.js
+./lib/plugins/registrar-test.js ./lib/plugins/registrar.js
+npm start
+```
+
+# To build and run drachtio
+See https://github.com/davehorton/drachtio-server/tree/develop
 
 ## Todo
 - drachtio-simple-server
