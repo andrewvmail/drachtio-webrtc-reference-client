@@ -33,4 +33,3 @@ export default Module({
     onRegistrationFailed: sequences.onRegistrationFailed
   },
 })
-

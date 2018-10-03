@@ -1,0 +1,66 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>drachtio-simple-server</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="outer-content">
+
+  <ion-list>
+    <ion-list-header>
+      Settings
+    </ion-list-header>
+
+    <button ion-item>
+      <ion-icon name="globe" item-start color="primary"
+               ></ion-icon>
+      <ion-label>Server</ion-label>
+      <ion-input text-right item-end value="{{server}}"
+                 (blur)="saveInput({target: 'drachtioSimpleServer.settings.server', value: $event.target.value})"
+      ></ion-input>
+    </button>
+
+    <button ion-item>
+      <ion-icon name="globe" item-start color="primary"></ion-icon>
+      <ion-label>Domain</ion-label>
+      <ion-input text-right item-end value="{{domain}}"
+                 (blur)="saveInput({target: 'drachtioSimpleServer.settings.domain', value: $event.target.value})"
+      ></ion-input>
+    </button>
+
+    <button ion-item>
+      <ion-icon name="person" item-start color="primary"></ion-icon>
+      <ion-label>Auth Username</ion-label>
+      <ion-input text-right item-end value="{{username}}"
+                 (blur)="saveInput({target: 'drachtioSimpleServer.settings.username', value: $event.target.value})"
+
+      ></ion-input>
+    </button>
+
+    <button ion-item>
+      <ion-icon name="wifi" item-start color="primary"></ion-icon>
+      <ion-label>Password</ion-label>
+      <ion-input text-right item-end value="{{password}}"
+                 (blur)="saveInput({target: 'drachtioSimpleServer.settings.password', value: $event.target.value})"
+
+      ></ion-input>
+    </button>
+
+    <!--<ion-item>-->
+      <!--<ion-icon name="call" item-start color="primary"></ion-icon>-->
+      <!--<ion-label>Auto Register</ion-label>-->
+      <!--<ion-toggle color="secondary" checked="{{autoRegister}}"-->
+                  <!--(ionChange)="saveInput({target: 'simpleDrachtioRegistrar.settings.autoRegister', value: !autoRegister})"-->
+
+      <!--&gt;</ion-toggle>-->
+    <!--</ion-item>-->
+
+  </ion-list>
+
+</ion-content>

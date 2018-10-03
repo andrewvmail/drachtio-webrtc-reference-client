@@ -53,7 +53,7 @@ export default function Sip({
   };
 
   return Provider({
-    connect({ uri, wsServer, password, authorizationUser }, cb) {
+    connect({ register, uri, wsServer, password, authorizationUser }, cb) {
       try {
         ua = new SIP.UA({
           uri,
@@ -71,6 +71,7 @@ export default function Sip({
 
       ua.transport.on("connected", transport => {
         console.log("connected");
+        console.log(session)
         cb();
       });
       ua.transport.on("connecting", connecting => {

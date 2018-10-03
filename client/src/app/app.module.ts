@@ -16,21 +16,25 @@ import { SimpleDrachtioRegistrarTabsPage } from "../pages/simple-drachtio-regist
 import { SimpleDrachtioRegistrarDialerPage } from "../pages/simple-drachtio-registrar-dialer/simple-drachtio-registrar-dialer";
 import { SimpleDrachtioRegistrarSettingsPage } from "../pages/simple-drachtio-registrar-settings/simple-drachtio-registrar-settings";
 import { SimpleDrachtioRegistrarInCallModalPage } from "../pages/simple-drachtio-registrar-in-call-modal/simple-drachtio-registrar-in-call-modal";
+import { DrachtioSimpleServerChatPage } from '../pages/drachtio-simple-server-chat/drachtio-simple-server-chat'
+import { DrachtioSimpleServerSettingsPage } from '../pages/drachtio-simple-server-settings/drachtio-simple-server-settings'
 
 import { cerebralFactory } from "../cerebral";
 import Devtools from "cerebral/devtools";
+import { DrachtioSimpleServerTabsPage } from '../pages/drachtio-simple-server-tabs/drachtio-simple-server-tabs'
+
 
 function configureController(modal: ModalController) {
   const cerebral = cerebralFactory(modal);
 
   return new ControllerService(cerebral, {
-    // devtools: Devtools({
-    //   host: "localhost:9999",
-    //   reconnect: true,
-    //   storeMutations: true,
-    //   bigComponentsWarning: 5,
-    //   warnStateProps: true
-    // })
+    devtools: Devtools({
+      host: "localhost:9999",
+      reconnect: true,
+      storeMutations: true,
+      bigComponentsWarning: 5,
+      warnStateProps: true
+    })
   });
 }
 
@@ -40,7 +44,10 @@ function configureController(modal: ModalController) {
     SimpleDrachtioRegistrarTabsPage,
     SimpleDrachtioRegistrarDialerPage,
     SimpleDrachtioRegistrarSettingsPage,
-    SimpleDrachtioRegistrarInCallModalPage
+    SimpleDrachtioRegistrarInCallModalPage,
+    DrachtioSimpleServerChatPage,
+    DrachtioSimpleServerSettingsPage,
+    DrachtioSimpleServerTabsPage
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -49,7 +56,10 @@ function configureController(modal: ModalController) {
     SimpleDrachtioRegistrarTabsPage,
     SimpleDrachtioRegistrarDialerPage,
     SimpleDrachtioRegistrarSettingsPage,
-    SimpleDrachtioRegistrarInCallModalPage
+    SimpleDrachtioRegistrarInCallModalPage,
+    DrachtioSimpleServerChatPage,
+    DrachtioSimpleServerSettingsPage,
+    DrachtioSimpleServerTabsPage
   ],
   providers: [
     {

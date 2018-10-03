@@ -1,6 +1,7 @@
 import StorageModule from "@cerebral/storage";
 import { Module } from "cerebral";
 import SimpleDrachtioRegistrar from "./simple-drachtio-registrar";
+import DrachtioSimpleServer from "./drachtio-simple-server";
 import Sip from "./providers/Sip";
 import { onAccepted, onCancel, onInvite, onRejected, onTerminated, onRegistrationFailed } from './simple-drachtio-registrar/sequences'
 import Modal from './providers/Modal'
@@ -37,6 +38,7 @@ export function cerebralFactory(modal) {
     },
     modules: {
       simpleDrachtioRegistrar: SimpleDrachtioRegistrar,
+      drachtioSimpleServer: DrachtioSimpleServer,
       storage: StorageModule({
         target: localStorage,
         json: true,
@@ -44,7 +46,9 @@ export function cerebralFactory(modal) {
           "simpleDrachtioRegistrar.settings":
             "simpleDrachtioRegistrar.settings",
           "simpleDrachtioRegistrar.lastDialed":
-            "simpleDrachtioRegistrar.lastDialed"
+            "simpleDrachtioRegistrar.lastDialed",
+          "drachtioSimpleServer.settings": "drachtioSimpleServer.settings",
+          "drachtioSimpleServer.messages": "drachtioSimpleServer.messages"
         }
       })
     }

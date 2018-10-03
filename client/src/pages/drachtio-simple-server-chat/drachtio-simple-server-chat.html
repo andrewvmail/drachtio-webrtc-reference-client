@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{registered ? 'Registered as ' + (name || authUsername) : 'Not Registered' }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="outer-content">
+    <audio id="remoteAudio"></audio>
+
+    <ion-item>
+      <ion-input class="text--large" type="text" value="{{toCall}}" placeholder="Enter a number or name"
+                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.toCall', value: $event.target.value})"
+      ></ion-input>
+    </ion-item>
+
+</ion-content>
+
+<ion-footer no-border>
+  <button class="btn--no-border" color="secondary" full large ion-button item-end
+          (click)="registered ? unregister() : register()"
+  >
+    {{registered ? 'Unregister' : 'Register' }}
+  </button>
+  <button class="btn--no-border" full large ion-button item-end (click)="call()">Call</button>
+</ion-footer>
