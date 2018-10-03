@@ -33,9 +33,10 @@ node app.js
 git clone https://github.com/davehorton/drachtio-simple-server
 cd drachtio-simple-server
 npm install
-cp config/default.json.example config/default.json
-./lib/plugins/authenticate-test.js ./lib/plugins/your-authenticator-here.js
-./lib/plugins/registrar-test.js ./lib/plugins/registrar.js
+cp config/default.json.example config/default.json # then might need to change redis port 6379
+cp ./lib/plugins/authenticate-test.js ./lib/plugins/your-authenticator-here.js
+cp ./lib/plugins/registrar-test.js ./lib/plugins/registrar.js
+# start redis at configured port
 npm start
 ```
 
