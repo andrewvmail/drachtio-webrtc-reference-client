@@ -24,7 +24,7 @@ export function cerebralFactory(modal) {
         username: "1234",
         password: "1234",
         iceServers: [
-          { uri: "stun.l.google.com:19302", username: "", credential: "" }
+          { url: "stun:stun.l.google.com:19302", username: "", credential: "" }
         ]
         // autoRegister: true,
       },
@@ -69,7 +69,7 @@ export function cerebralFactory(modal) {
         function addIceServer({ state }) {
           let iceServers = state.get("settings.iceServers");
           iceServers.push({
-            uri: "",
+            url: "",
             username: "",
             credential: ""
           });

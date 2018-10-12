@@ -66,8 +66,8 @@
         <ion-item class="padding-left-2px">
           <ion-label floating>STUN/TURN URI: </ion-label>
           <ion-input
-            (blur)="saveInput({target: 'settings.iceServers.' + index + '.uri', value: $event.target.value})"
-                     type="text" value="{{iceServer.uri}}">
+            (blur)="saveInput({target: 'settings.iceServers.' + index + '.url', value: $event.target.value})"
+                     type="text" value="{{iceServer.url}}">
           </ion-input>
         </ion-item>
       </ion-col>
