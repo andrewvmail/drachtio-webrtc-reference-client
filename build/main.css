@@ -25724,7 +25724,7 @@ ion-navbar.toolbar {
   font-size: 2em;
 }
 
-page-simple-drachtio-registrar-in-call-modal .scroll-content {
+page-in-call-modal .scroll-content {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -25737,4 +25737,8 @@ page-simple-drachtio-registrar-in-call-modal .scroll-content {
   -webkit-align-items: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
+}
+
+page-settings .ice-servers {
+  font-size: 14px;
 }
