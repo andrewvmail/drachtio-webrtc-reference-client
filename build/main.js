@@ -315,11 +315,11 @@ var ModalPage = /** @class */ (function (_super) {
             changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* ChangeDetectionStrategy */].OnPush
         }),
         Object(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["connect"])({
-            name: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.name"]),
-            connected: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.connected"]),
-            type: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["simpleDrachtioRegistrar.call.type"]),
-            answer: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["simpleDrachtioRegistrar.answer"]),
-            hangup: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["simpleDrachtioRegistrar.hangup"]),
+            name: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["call.name"]),
+            connected: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["call.connected"]),
+            type: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["c" /* state */])(["call.type"]),
+            answer: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["answer"]),
+            hangup: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["hangup"]),
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"]) === "function" && _a || Object, __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* ViewController */]])
     ], ModalPage);
