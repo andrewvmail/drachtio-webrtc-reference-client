@@ -17,11 +17,11 @@ import { ViewController, NavParams } from "ionic-angular"
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 @connect({
-  name: state(["simpleDrachtioRegistrar.call.name"]),
-  connected: state(["simpleDrachtioRegistrar.call.connected"]),
-  type: state(["simpleDrachtioRegistrar.call.type"]),
-  answer: signal(["simpleDrachtioRegistrar.answer"]),
-  hangup: signal(["simpleDrachtioRegistrar.hangup"]),
+  name: state(["call.name"]),
+  connected: state(["call.connected"]),
+  type: state(["call.type"]),
+  answer: signal(["answer"]),
+  hangup: signal(["hangup"]),
 })
 export class ModalPage extends CerebralComponent {
   constructor(
