@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 121:
+/***/ 122:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 121;
+webpackEmptyAsyncContext.id = 122;
 
 /***/ }),
 
-/***/ 162:
+/***/ 163:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,7 +30,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 162;
+webpackEmptyAsyncContext.id = 163;
 
 /***/ }),
 
@@ -188,7 +188,7 @@ var SettingsPage = /** @class */ (function (_super) {
     };
     SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-settings",template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/settings/settings.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Settings</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="presentRadioPopover($event)">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="outer-content">\n\n  <ion-list>\n    <ion-list-header>\n      Settings\n    </ion-list-header>\n\n    <button ion-item>\n      <ion-icon name="globe" item-start color="primary"\n               ></ion-icon>\n      <ion-label>Server</ion-label>\n      <ion-input text-right item-end value="{{server}}"\n                 (blur)="saveInput({target: \'settings.server\', value: $event.target.value})"\n      ></ion-input>\n    </button>\n\n    <button ion-item>\n      <ion-icon name="globe" item-start color="primary"></ion-icon>\n      <ion-label>Domain</ion-label>\n      <ion-input text-right item-end value="{{domain}}"\n                 (blur)="saveInput({target: \'settings.domain\', value: $event.target.value})"\n      ></ion-input>\n    </button>\n\n    <button ion-item>\n      <ion-icon name="person" item-start color="primary"></ion-icon>\n      <ion-label>Auth Username</ion-label>\n      <ion-input text-right item-end value="{{username}}"\n                 (blur)="saveInput({target: \'settings.username\', value: $event.target.value})"\n\n      ></ion-input>\n    </button>\n\n    <button ion-item>\n      <ion-icon name="wifi" item-start color="primary"></ion-icon>\n      <ion-label>Password</ion-label>\n      <ion-input text-right item-end value="{{password}}"\n                 (blur)="saveInput({target: \'settings.password\', value: $event.target.value})"\n\n      ></ion-input>\n    </button>\n\n    <ion-item-divider>\n     Ice Options\n    </ion-item-divider>\n\n    <ion-row *ngFor="let iceServer of iceServers; let index = index;">\n      <ion-col col-5>\n        <ion-item class="padding-left-2px">\n          <ion-label floating>STUN/TURN URI: </ion-label>\n          <ion-input\n            (blur)="saveInput({target: \'settings.iceServers.\' + index + \'.uri\', value: $event.target.value})"\n                     type="text" value="{{iceServer.uri}}">\n          </ion-input>\n        </ion-item>\n      </ion-col>\n      <ion-col col-3>\n        <ion-item class="padding-left-2px">\n          <ion-label floating>Username</ion-label>\n          <ion-input\n            (blur)="saveInput({target: \'settings.iceServers.\' + index + \'.username\', value: $event.target.value})"\n                     type="text" value="{{iceServer.username}}">\n          </ion-input>\n        </ion-item>\n      </ion-col>\n      <ion-col col-3>\n        <ion-item class="padding-left-2px">\n          <ion-label floating>Credential</ion-label>\n          <ion-input\n            (blur)="saveInput({target: \'settings.iceServers.\' + index + \'.credential\', value: $event.target.value})"\n                     type="text" value="{{iceServer.credential}}">\n          </ion-input>\n        </ion-item>\n      </ion-col>\n      <ion-col col-1>\n        <ion-icon (click)="deleteIceServer({index: index})" name="close-circle" style="position: absolute; bottom: 0.5em; font-size: 2em;"\n                  item-start color="primary"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/settings/settings.html"*/,
+            selector: "page-settings",template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/settings/settings.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Settings</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="presentRadioPopover($event)">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="outer-content">\n\n  <ion-list>\n    <ion-list-header>\n      Settings\n    </ion-list-header>\n\n    <button ion-item>\n      <ion-icon name="globe" item-start color="primary"\n               ></ion-icon>\n      <ion-label>Server</ion-label>\n      <ion-input text-right item-end value="{{server}}"\n                 (blur)="saveInput({target: \'settings.server\', value: $event.target.value})"\n      ></ion-input>\n    </button>\n\n    <button ion-item>\n      <ion-icon name="globe" item-start color="primary"></ion-icon>\n      <ion-label>Domain</ion-label>\n      <ion-input text-right item-end value="{{domain}}"\n                 (blur)="saveInput({target: \'settings.domain\', value: $event.target.value})"\n      ></ion-input>\n    </button>\n\n    <button ion-item>\n      <ion-icon name="person" item-start color="primary"></ion-icon>\n      <ion-label>Auth Username</ion-label>\n      <ion-input text-right item-end value="{{username}}"\n                 (blur)="saveInput({target: \'settings.username\', value: $event.target.value})"\n\n      ></ion-input>\n    </button>\n\n    <button ion-item>\n      <ion-icon name="wifi" item-start color="primary"></ion-icon>\n      <ion-label>Password</ion-label>\n      <ion-input text-right item-end value="{{password}}"\n                 (blur)="saveInput({target: \'settings.password\', value: $event.target.value})"\n\n      ></ion-input>\n    </button>\n\n    <ion-item-divider>\n     Ice Options\n    </ion-item-divider>\n\n    <ion-row *ngFor="let iceServer of iceServers; let index = index;">\n      <ion-col col-5>\n        <ion-item class="padding-left-2px">\n          <ion-label floating>STUN/TURN URI: </ion-label>\n          <ion-input\n            (blur)="saveInput({target: \'settings.iceServers.\' + index + \'.url\', value: $event.target.value})"\n                     type="text" value="{{iceServer.url}}">\n          </ion-input>\n        </ion-item>\n      </ion-col>\n      <ion-col col-3>\n        <ion-item class="padding-left-2px">\n          <ion-label floating>Username</ion-label>\n          <ion-input\n            (blur)="saveInput({target: \'settings.iceServers.\' + index + \'.username\', value: $event.target.value})"\n                     type="text" value="{{iceServer.username}}">\n          </ion-input>\n        </ion-item>\n      </ion-col>\n      <ion-col col-3>\n        <ion-item class="padding-left-2px">\n          <ion-label floating>Credential</ion-label>\n          <ion-input\n            (blur)="saveInput({target: \'settings.iceServers.\' + index + \'.credential\', value: $event.target.value})"\n                     type="text" value="{{iceServer.credential}}">\n          </ion-input>\n        </ion-item>\n      </ion-col>\n      <ion-col col-1>\n        <ion-icon (click)="deleteIceServer({index: index})" name="close-circle" style="position: absolute; bottom: 0.5em; font-size: 2em;"\n                  item-start color="primary"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/settings/settings.html"*/,
             changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* ChangeDetectionStrategy */].OnPush
         }),
         Object(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["connect"])({
@@ -347,9 +347,9 @@ var ModalPage = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return onRejected; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return onCancel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return onRegistrationFailed; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral_operators__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral_operators__ = __webpack_require__(318);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral_tags__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions__ = __webpack_require__(336);
 
 
 
@@ -427,13 +427,13 @@ var onRegistrationFailed = [
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(245);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -441,7 +441,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 244:
+/***/ 245:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -449,17 +449,18 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__cerebral_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(312);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_dialer_dialer__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_settings_settings__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_in_call_modal_in_call_modal__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_settings_menu__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_cerebral_devtools__ = __webpack_require__(338);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -479,10 +480,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-// import Devtools from "cerebral/devtools";
+
 function configureController(modal) {
     var cerebral = Object(__WEBPACK_IMPORTED_MODULE_12__main__["a" /* cerebralFactory */])(modal);
-    return new __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__["ControllerService"](cerebral, {});
+    return new __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__["ControllerService"](cerebral, {
+        devtools: Object(__WEBPACK_IMPORTED_MODULE_13_cerebral_devtools__["a" /* default */])({
+            host: "localhost:9999",
+            reconnect: true,
+            storeMutations: true,
+            bigComponentsWarning: 5,
+            warnStateProps: true
+        })
+    });
 }
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -528,15 +537,15 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 311:
+/***/ 312:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(213);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -574,17 +583,17 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 312:
+/***/ 313:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = cerebralFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cerebral_storage__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cerebral_storage__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cerebral_storage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cerebral_storage__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_Sip__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_Sip__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sequences__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_Modal__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_Modal__ = __webpack_require__(337);
 
 
 
@@ -602,7 +611,7 @@ function cerebralFactory(modal) {
                 username: "1234",
                 password: "1234",
                 iceServers: [
-                    { uri: "stun.l.google.com:19302", username: "", credential: "" }
+                    { url: "stun:stun.l.google.com:19302", username: "", credential: "" }
                 ]
                 // autoRegister: true,
             },
@@ -649,7 +658,7 @@ function cerebralFactory(modal) {
                     var state = _a.state;
                     var iceServers = state.get("settings.iceServers");
                     iceServers.push({
-                        uri: "",
+                        url: "",
                         username: "",
                         credential: ""
                     });
@@ -688,12 +697,12 @@ function cerebralFactory(modal) {
 
 /***/ }),
 
-/***/ 315:
+/***/ 316:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = Sip;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sip_js__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sip_js__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sip_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sip_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(25);
 
@@ -882,7 +891,7 @@ function Sip(_a) {
 
 /***/ }),
 
-/***/ 335:
+/***/ 336:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1004,7 +1013,7 @@ function closeModal(_a) {
 
 /***/ }),
 
-/***/ 336:
+/***/ 337:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1040,5 +1049,5 @@ function Modal(modal) {
 
 /***/ })
 
-},[221]);
+},[222]);
 //# sourceMappingURL=main.js.map
