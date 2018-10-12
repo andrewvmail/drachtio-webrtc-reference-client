@@ -5,6 +5,11 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Settings</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentRadioPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -52,15 +57,43 @@
       ></ion-input>
     </button>
 
-    <!--<ion-item>-->
-      <!--<ion-icon name="call" item-start color="primary"></ion-icon>-->
-      <!--<ion-label>Auto Register</ion-label>-->
-      <!--<ion-toggle color="secondary" checked="{{autoRegister}}"-->
-                  <!--(ionChange)="saveInput({target: 'settings.autoRegister', value: !autoRegister})"-->
+    <ion-item-divider>
+     Ice Options
+    </ion-item-divider>
 
-      <!--&gt;</ion-toggle>-->
-    <!--</ion-item>-->
-
+    <ion-row *ngFor="let iceServer of iceServers; let index = index;">
+      <ion-col col-5>
+        <ion-item class="padding-left-2px">
+          <ion-label floating>STUN/TURN URI: </ion-label>
+          <ion-input
+            (blur)="saveInput({target: 'settings.iceServers.' + index + '.uri', value: $event.target.value})"
+                     type="text" value="{{iceServer.uri}}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-3>
+        <ion-item class="padding-left-2px">
+          <ion-label floating>Username</ion-label>
+          <ion-input
+            (blur)="saveInput({target: 'settings.iceServers.' + index + '.username', value: $event.target.value})"
+                     type="text" value="{{iceServer.username}}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-3>
+        <ion-item class="padding-left-2px">
+          <ion-label floating>Credential</ion-label>
+          <ion-input
+            (blur)="saveInput({target: 'settings.iceServers.' + index + '.credential', value: $event.target.value})"
+                     type="text" value="{{iceServer.credential}}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon (click)="deleteIceServer({index: index})" name="close-circle" style="position: absolute; bottom: 0.5em; font-size: 2em;"
+                  item-start color="primary"></ion-icon>
+      </ion-col>
+    </ion-row>
   </ion-list>
 
 </ion-content>

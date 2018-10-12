@@ -62,7 +62,23 @@ export default function Sip({
           },
           authorizationUser,
           password,
-          register: true
+          register: true,
+          sessionDescriptionHandlerFactoryOptions: {
+            constraints: {
+              audio: true,
+              video: false
+            },
+            peerConnectionOptions: {
+              rtcConfiguration: {
+                iceServers: this.context.state.get("settings.iceServers"),
+                // on ios this settings is overriden by cordova plugin
+                iceTransportPolicy: "all",
+                bundlePolicy: "max-compat",
+                rtcpMuxPolicy: "negotiate"
+              },
+              iceCheckingTimeout: 800 // on ios this is overridden by the cordova plugin
+            }
+          }
         });
       } catch (error) {
         console.error(error);
@@ -105,7 +121,7 @@ export default function Sip({
             session.request.from.friendlyName
         });
       });
-      
+
     },
 
     attachEvents(session, controller) {

@@ -16,9 +16,10 @@ import { RegistrarTabsPage } from "../pages/tabs/tabs";
 import { DialerPage } from "../pages/dialer/dialer";
 import { SettingsPage } from "../pages/settings/settings";
 import { ModalPage } from "../pages/in-call-modal/in-call-modal";
+import { SettingsMenu } from '../pages/settings/menu'
 
 import { cerebralFactory } from "../main";
-import Devtools from "cerebral/devtools";
+// import Devtools from "cerebral/devtools";
 
 function configureController(modal: ModalController) {
   const cerebral = cerebralFactory(modal);
@@ -40,7 +41,8 @@ function configureController(modal: ModalController) {
     RegistrarTabsPage,
     DialerPage,
     SettingsPage,
-    ModalPage
+    ModalPage,
+    SettingsMenu
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -49,7 +51,9 @@ function configureController(modal: ModalController) {
     RegistrarTabsPage,
     DialerPage,
     SettingsPage,
-    ModalPage
+    ModalPage,
+    SettingsMenu
+
   ],
   providers: [
     {

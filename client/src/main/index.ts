@@ -22,7 +22,10 @@ export function cerebralFactory(modal) {
         server: "127.0.0.1",
         domain: "ctel.com",
         username: "1234",
-        password: "1234"
+        password: "1234",
+        iceServers: [
+          { uri: "stun.l.google.com:19302", username: "", credential: "" }
+        ]
         // autoRegister: true,
       },
       lastDialed: "",
@@ -60,6 +63,27 @@ export function cerebralFactory(modal) {
       saveInput: [
         function saveInput({ props, state }) {
           state.set(props.target, props.value);
+        }
+      ],
+      addIceServer: [
+        function addIceServer({ state }) {
+          let iceServers = state.get("settings.iceServers");
+          iceServers.push({
+            uri: "",
+            username: "",
+            credential: ""
+          });
+
+          state.set("settings.iceServers", iceServers);
+        }
+      ],
+      deleteIceServer: [
+        function deleteIceServer({ props, state }) {
+          const { index } = props;
+          let iceServers = state.get("settings.iceServers");
+          iceServers.splice(index, 1);
+
+          state.set("settings.iceServers", iceServers);
         }
       ],
       call: sequences.callSequence,
