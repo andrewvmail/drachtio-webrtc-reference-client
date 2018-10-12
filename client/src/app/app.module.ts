@@ -12,12 +12,12 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { ControllerService } from "@cerebral/angular";
 
 import { MyApp } from "./app.component";
-import { SimpleDrachtioRegistrarTabsPage } from "../pages/simple-drachtio-registrar-tabs/simple-drachtio-registrar-tabs";
-import { SimpleDrachtioRegistrarDialerPage } from "../pages/simple-drachtio-registrar-dialer/simple-drachtio-registrar-dialer";
-import { SimpleDrachtioRegistrarSettingsPage } from "../pages/simple-drachtio-registrar-settings/simple-drachtio-registrar-settings";
-import { SimpleDrachtioRegistrarInCallModalPage } from "../pages/simple-drachtio-registrar-in-call-modal/simple-drachtio-registrar-in-call-modal";
+import { RegistrarTabsPage } from "../pages/tabs/tabs";
+import { DialerPage } from "../pages/dialer/dialer";
+import { SettingsPage } from "../pages/settings/settings";
+import { ModalPage } from "../pages/in-call-modal/in-call-modal";
 
-import { cerebralFactory } from "../cerebral";
+import { cerebralFactory } from "../main";
 import Devtools from "cerebral/devtools";
 
 function configureController(modal: ModalController) {
@@ -37,19 +37,19 @@ function configureController(modal: ModalController) {
 @NgModule({
   declarations: [
     MyApp,
-    SimpleDrachtioRegistrarTabsPage,
-    SimpleDrachtioRegistrarDialerPage,
-    SimpleDrachtioRegistrarSettingsPage,
-    SimpleDrachtioRegistrarInCallModalPage
+    RegistrarTabsPage,
+    DialerPage,
+    SettingsPage,
+    ModalPage
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    SimpleDrachtioRegistrarTabsPage,
-    SimpleDrachtioRegistrarDialerPage,
-    SimpleDrachtioRegistrarSettingsPage,
-    SimpleDrachtioRegistrarInCallModalPage
+    RegistrarTabsPage,
+    DialerPage,
+    SettingsPage,
+    ModalPage
   ],
   providers: [
     {

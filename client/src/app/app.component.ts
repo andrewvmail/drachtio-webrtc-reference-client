@@ -3,13 +3,13 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { connect, ControllerService } from "@cerebral/angular";
-import { SimpleDrachtioRegistrarTabsPage } from '../pages/simple-drachtio-registrar-tabs/simple-drachtio-registrar-tabs'
+import { RegistrarTabsPage } from '../pages/tabs/tabs'
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SimpleDrachtioRegistrarTabsPage;
+  rootPage:any = RegistrarTabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -20,4 +20,3 @@ export class MyApp {
     });
   }
 }
-

@@ -12,8 +12,8 @@ import { state, signal } from "cerebral/tags";
 import { ViewController, NavParams } from "ionic-angular"
 
 @Component({
-  selector: "page-simple-drachtio-registrar-in-call-modal",
-  templateUrl: "simple-drachtio-registrar-in-call-modal.html",
+  selector: "page-in-call-modal",
+  templateUrl: "in-call-modal.html",
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 @connect({
@@ -23,7 +23,7 @@ import { ViewController, NavParams } from "ionic-angular"
   answer: signal(["simpleDrachtioRegistrar.answer"]),
   hangup: signal(["simpleDrachtioRegistrar.hangup"]),
 })
-export class SimpleDrachtioRegistrarInCallModalPage extends CerebralComponent {
+export class ModalPage extends CerebralComponent {
   constructor(
     public cdr: ChangeDetectorRef,
     public controller: ControllerService,

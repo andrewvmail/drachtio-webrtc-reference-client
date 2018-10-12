@@ -1,12 +1,12 @@
-import { SimpleDrachtioRegistrarInCallModalPage } from "../../pages/simple-drachtio-registrar-in-call-modal/simple-drachtio-registrar-in-call-modal";
+import { ModalPage } from "../pages/in-call-modal/in-call-modal";
 
 export function register({ sip, state, path }) {
   return new Promise((resolve, reject) => {
-    const server = state.get("simpleDrachtioRegistrar.settings.server");
-    const domain = state.get("simpleDrachtioRegistrar.settings.domain");
-    const authUsername = state.get("simpleDrachtioRegistrar.settings.username");
-    const password = state.get("simpleDrachtioRegistrar.settings.password");
-    const username = state.get("simpleDrachtioRegistrar.username");
+    const server = state.get("settings.server");
+    const domain = state.get("settings.domain");
+    const authUsername = state.get("settings.username");
+    const password = state.get("settings.password");
+    const username = state.get("username");
     sip.connect(
       {
         uri: (username || authUsername) + "@" + domain,
@@ -26,13 +26,13 @@ export function register({ sip, state, path }) {
 
 export function unregister({ sip, state, path }) {
   sip.unregister();
-  state.set("simpleDrachtioRegistrar.registered", false);
+  state.set("registered", false);
 }
 
 export function call({ sip, state, path }) {
   return new Promise((resolve, reject) => {
-    const domain = state.get("simpleDrachtioRegistrar.settings.domain");
-    const toCall = state.get("simpleDrachtioRegistrar.toCall");
+    const domain = state.get("settings.domain");
+    const toCall = state.get("toCall");
     sip.invite(
       toCall + "@" + domain,
       {
@@ -54,8 +54,8 @@ export function call({ sip, state, path }) {
 }
 
 export function decideWhatToDo({ state, path }) {
-  const lastDialed = state.get("simpleDrachtioRegistrar.lastDialed");
-  const toCall = state.get("simpleDrachtioRegistrar.toCall");
+  const lastDialed = state.get("lastDialed");
+  const toCall = state.get("toCall");
 
   if (!toCall && !lastDialed) {
     return path.doNothing();
@@ -75,12 +75,12 @@ export function shouldRegister({ path }) {
 }
 
 export function openInCallModal({ modal }) {
-  modal.create(SimpleDrachtioRegistrarInCallModalPage);
+  modal.create(ModalPage);
 }
 
 export function setCallName({ state, props }) {
   state.set(
-    "simpleDrachtioRegistrar.call.name",
+    "call.name",
     props.name.split("@")[0] || "Unknown"
   );
 }
@@ -90,8 +90,8 @@ export function answer({ sip }) {
 }
 
 export function hangup({ sip, state }) {
-  const type = state.get("simpleDrachtioRegistrar.call.type");
-  const connected = state.get("simpleDrachtioRegistrar.call.connected");
+  const type = state.get("call.type");
+  const connected = state.get("call.connected");
   if (type === "incoming") {
     if (!connected) {
       sip.reject();

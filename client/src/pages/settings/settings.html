@@ -4,7 +4,7 @@
     <button ion-button menuToggle left>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>simple-drachtio-registrar</ion-title>
+    <ion-title>Settings</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,7 +22,7 @@
                ></ion-icon>
       <ion-label>Server</ion-label>
       <ion-input text-right item-end value="{{server}}"
-                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.settings.server', value: $event.target.value})"
+                 (blur)="saveInput({target: 'settings.server', value: $event.target.value})"
       ></ion-input>
     </button>
 
@@ -30,7 +30,7 @@
       <ion-icon name="globe" item-start color="primary"></ion-icon>
       <ion-label>Domain</ion-label>
       <ion-input text-right item-end value="{{domain}}"
-                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.settings.domain', value: $event.target.value})"
+                 (blur)="saveInput({target: 'settings.domain', value: $event.target.value})"
       ></ion-input>
     </button>
 
@@ -38,7 +38,7 @@
       <ion-icon name="person" item-start color="primary"></ion-icon>
       <ion-label>Auth Username</ion-label>
       <ion-input text-right item-end value="{{username}}"
-                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.settings.username', value: $event.target.value})"
+                 (blur)="saveInput({target: 'settings.username', value: $event.target.value})"
 
       ></ion-input>
     </button>
@@ -47,7 +47,7 @@
       <ion-icon name="wifi" item-start color="primary"></ion-icon>
       <ion-label>Password</ion-label>
       <ion-input text-right item-end value="{{password}}"
-                 (blur)="saveInput({target: 'simpleDrachtioRegistrar.settings.password', value: $event.target.value})"
+                 (blur)="saveInput({target: 'settings.password', value: $event.target.value})"
 
       ></ion-input>
     </button>
@@ -56,7 +56,7 @@
       <!--<ion-icon name="call" item-start color="primary"></ion-icon>-->
       <!--<ion-label>Auto Register</ion-label>-->
       <!--<ion-toggle color="secondary" checked="{{autoRegister}}"-->
-                  <!--(ionChange)="saveInput({target: 'simpleDrachtioRegistrar.settings.autoRegister', value: !autoRegister})"-->
+                  <!--(ionChange)="saveInput({target: 'settings.autoRegister', value: !autoRegister})"-->
 
       <!--&gt;</ion-toggle>-->
     <!--</ion-item>-->

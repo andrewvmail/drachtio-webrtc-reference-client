@@ -95,17 +95,19 @@ export default function Sip({
         session.on("terminate", () => {
           this.context.controller.runSignal("onTerminated", onTerminated);
         });
+
         session.on("bye", () => {
           this.context.controller.runSignal("onBye", onBye);
         });
-
         this.context.controller.runSignal("onInvite", onInvite, {
           name:
             session.request.from.displayName ||
             session.request.from.friendlyName
         });
       });
+      
     },
+
     attachEvents(session, controller) {
       EVENT_NAMES_TO_SIGNAL.map((action: any) => {
         session.on(action.event, (response, cause) => {
