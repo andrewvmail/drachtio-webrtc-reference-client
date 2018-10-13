@@ -1,5 +1,13 @@
 import SIP from "sip.js";
 
+declare const window, cordova
+
+document.addEventListener("deviceready", function() {
+  if (window.device.platform === "iOS") {
+    cordova.plugins.iosrtc.registerGlobals();
+  }
+});
+
 const EVENT_NAMES_TO_SIGNAL = [
   { event: "accepted", sequence: "onAccepted" },
   { event: "rejected", sequence: "onRejected" },
