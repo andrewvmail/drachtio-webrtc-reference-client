@@ -25724,6 +25724,38 @@ ion-navbar.toolbar {
   font-size: 2em;
 }
 
+page-about .align-text-middle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+page-about .scroll-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+page-dialer .outer-content {
+  background: url("../assets/imgs/momo.jpeg") no-repeat center center fixed;
+  background-size: 100%;
+  background-color: #f7f7f7;
+}
+
 page-in-call-modal .scroll-content {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
