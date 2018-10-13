@@ -1,4 +1,5 @@
 import { ModalPage } from "../pages/in-call-modal/in-call-modal";
+import config from '../config'
 
 export function register({ sip, state, path }) {
   return new Promise((resolve, reject) => {
@@ -70,8 +71,22 @@ export function decideWhatToDo({ state, path }) {
   return path.doNothing();
 }
 
-export function shouldRegister({ path }) {
-  return path.register();
+export function shouldRegister({ state, path, toast }) {
+  const iceServers = state.get("settings.iceServers");
+  if(iceServers === []) {
+    state.push('settings.iceServers', config.defaultIceServers )
+  }
+  let error = false
+  iceServers.forEach(server => {
+    if (server.url.indexOf("stun:") === -1 && server.url.indexOf("turn:") === -1) {
+      error = true
+    }
+  });
+  if(error) {
+    toast.show('Check your settings and ice configuration')
+    return path.checkSettings();
+  }
+  return path.register()
 }
 
 export function openInCallModal({ modal }) {
@@ -79,10 +94,7 @@ export function openInCallModal({ modal }) {
 }
 
 export function setCallName({ state, props }) {
-  state.set(
-    "call.name",
-    props.name.split("@")[0] || "Unknown"
-  );
+  state.set("call.name", props.name.split("@")[0] || "Unknown");
 }
 
 export function answer({ sip }) {

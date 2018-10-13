@@ -10,12 +10,14 @@ import {
   onRegistrationFailed
 } from "./sequences";
 import Modal from "./providers/Modal";
+import Toast from "./providers/Toast";
 import * as sequences from "./sequences";
+import config from '../config'
 
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get("username");
 
-export function cerebralFactory(modal) {
+export function cerebralFactory(modal, toast) {
   return Module({
     state: {
       settings: {
@@ -23,9 +25,8 @@ export function cerebralFactory(modal) {
         domain: "ctel.com",
         username: "1234",
         password: "1234",
-        iceServers: [
-          { url: "stun:stun.l.google.com:19302", username: "", credential: "" }
-        ]
+        iceServers: config.defaultIceServers
+
         // autoRegister: true,
       },
       lastDialed: "",
@@ -40,6 +41,7 @@ export function cerebralFactory(modal) {
     },
     catch: [],
     providers: {
+      toast: Toast(toast),
       modal: Modal(modal),
       sip: Sip({
         onAccepted,

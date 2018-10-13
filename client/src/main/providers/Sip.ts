@@ -121,7 +121,6 @@ export default function Sip({
             session.request.from.friendlyName
         });
       });
-
     },
 
     attachEvents(session, controller) {

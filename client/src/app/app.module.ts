@@ -4,8 +4,8 @@ import {
   IonicApp,
   IonicErrorHandler,
   IonicModule,
-  ModalController
-} from "ionic-angular";
+  ModalController, ToastController
+} from 'ionic-angular'
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 
@@ -19,10 +19,10 @@ import { ModalPage } from "../pages/in-call-modal/in-call-modal";
 import { SettingsMenu } from '../pages/settings/menu'
 
 import { cerebralFactory } from "../main";
-// import Devtools from "cerebral/devtools";
+import Devtools from "cerebral/devtools";
 
-function configureController(modal: ModalController) {
-  const cerebral = cerebralFactory(modal);
+function configureController(modal: ModalController, toast: ToastController) {
+  const cerebral = cerebralFactory(modal, toast);
 
   return new ControllerService(cerebral, {
     // devtools: Devtools({
@@ -59,7 +59,7 @@ function configureController(modal: ModalController) {
     {
       provide: ControllerService,
       useFactory: configureController,
-      deps: [ModalController]
+      deps: [ModalController, ToastController]
     },
     StatusBar,
     SplashScreen,

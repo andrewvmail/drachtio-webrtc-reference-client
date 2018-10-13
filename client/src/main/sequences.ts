@@ -54,7 +54,10 @@ export const registerSequence = [
         next: [set(state(["registered"]), true)],
         error: []
       }
-    ]
+    ],
+    checkSettings: [
+
+    ],
   }
 ];
 
