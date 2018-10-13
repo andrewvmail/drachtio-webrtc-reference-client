@@ -11,7 +11,7 @@ import {
 import { state, signal } from "cerebral/tags";
 
 @Component({
-  selector: "page-registrar-dialer",
+  selector: "page-dialer",
   templateUrl: "dialer.html",
   changeDetection: ChangeDetectionStrategy.OnPush
 })

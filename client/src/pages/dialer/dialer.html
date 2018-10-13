@@ -12,14 +12,17 @@
 
 <ion-content class="outer-content">
     <audio id="remoteAudio"></audio>
-
     <ion-item>
-      <ion-input class="text--large" type="text" value="{{toCall}}" placeholder="Enter a number or name"
-                 (blur)="saveInput({target: 'toCall', value: $event.target.value})"
-      ></ion-input>
+      <ion-input class="text--large"
+                 type="text"
+                 value="{{toCall}}"
+                 placeholder="Enter a number or name"
+                 (blur)="saveInput({target: 'toCall', value: $event.target.value})">
+      </ion-input>
     </ion-item>
-
+    <!--<img class="momo" width="100%" src="../assets/imgs/momo.jpeg" />-->
 </ion-content>
+
 
 <ion-footer no-border>
   <button class="btn--no-border" color="secondary" full large ion-button item-end
