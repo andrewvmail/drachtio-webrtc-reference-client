@@ -21,8 +21,9 @@ import { SettingsMenu } from '../pages/settings/menu'
 import { cerebralFactory } from "../main";
 import Devtools from "cerebral/devtools";
 import { LibrariesWeUse } from '../pages/libraries-we-use/libraries-we-use'
+import { About } from '../pages/about/about'
 
-function configureController(modal: ModalController, toast: ToastController) {
+export function configureController(modal: ModalController, toast: ToastController) {
   const cerebral = cerebralFactory(modal, toast);
 
   return new ControllerService(cerebral, {
@@ -44,7 +45,8 @@ function configureController(modal: ModalController, toast: ToastController) {
     SettingsPage,
     ModalPage,
     SettingsMenu,
-    LibrariesWeUse
+    LibrariesWeUse,
+    About
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -55,7 +57,8 @@ function configureController(modal: ModalController, toast: ToastController) {
     SettingsPage,
     ModalPage,
     SettingsMenu,
-    LibrariesWeUse
+    LibrariesWeUse,
+    About
   ],
   providers: [
     {
