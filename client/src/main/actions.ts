@@ -71,7 +71,7 @@ export function decideWhatToDo({ state, path }) {
   return path.doNothing();
 }
 
-export function shouldRegister({ state, path, toast }) {
+export function checkSettings({ state, path, toast }) {
   const iceServers = state.get("settings.iceServers");
   if(iceServers === []) {
     state.push('settings.iceServers', config.defaultIceServers )
@@ -86,7 +86,7 @@ export function shouldRegister({ state, path, toast }) {
     toast.show('Check your settings and ice configuration')
     return path.checkSettings();
   }
-  return path.register()
+  return path.next()
 }
 
 export function openInCallModal({ modal }) {

@@ -2,7 +2,7 @@ import { set } from "cerebral/operators";
 import { state } from "cerebral/tags";
 import {
   decideWhatToDo,
-  shouldRegister,
+  checkSettings,
   register,
   unregister,
   call,
@@ -14,50 +14,45 @@ import {
 } from "./actions";
 
 export const callSequence = [
-  set(state(["call.type"]), "outgoing"),
-  set(
-    state(["call.name"]),
-    state(["toCall"])
-  ),
-
-  decideWhatToDo,
+  checkSettings,
   {
-    setToCallWithLastRedialed: [
-      set(
-        state(["toCall"]),
-        state(["lastDialed"])
-      )
-    ],
-    doNothing: [],
-    call: [
-      set(
-        state(["lastDialed"]),
-        state(["toCall"])
-      ),
-      call,
+    next: [
+      set(state(["call.type"]), "outgoing"),
+      set(state(["call.name"]), state(["toCall"])),
+
+      decideWhatToDo,
       {
-        next: [set(state(["toCall"]), "")],
-        error: [set(state(["toCall"]), "")]
-      },
-      openInCallModal,
-      set(state(["call.connected"]), false)
-    ]
+        setToCallWithLastRedialed: [
+          set(state(["toCall"]), state(["lastDialed"]))
+        ],
+        doNothing: [],
+        call: [
+          set(state(["lastDialed"]), state(["toCall"])),
+          call,
+          {
+            next: [set(state(["toCall"]), "")],
+            error: [set(state(["toCall"]), "")]
+          },
+          openInCallModal,
+          set(state(["call.connected"]), false)
+        ]
+      }
+    ],
+    checkSettings: []
   }
 ];
 
 export const registerSequence = [
-  shouldRegister,
+  checkSettings,
   {
-    register: [
+    next: [
       register,
       {
         next: [set(state(["registered"]), true)],
         error: []
       }
     ],
-    checkSettings: [
-
-    ],
+    checkSettings: []
   }
 ];
 
@@ -75,35 +70,16 @@ export const hangupSequence = [
   set(state(["call.connected"]), false)
 ];
 
-export const answerSequence = [
-  answer,
-  set(state(["call.connected"]), true)
-];
+export const answerSequence = [answer, set(state(["call.connected"]), true)];
 
-export const onAccepted = [
-  set(state(["call.connected"]), true)
-];
+export const onAccepted = [set(state(["call.connected"]), true)];
 
-export const onTerminated = [
-  set(state(["call.connected"]), false),
-  closeModal
-];
+export const onTerminated = [set(state(["call.connected"]), false), closeModal];
 
-export const onBye = [
-  set(state(["call.connected"]), false),
-  closeModal
-];
+export const onBye = [set(state(["call.connected"]), false), closeModal];
 
-export const onRejected = [
-  set(state(["call.connected"]), false),
-  closeModal
-];
+export const onRejected = [set(state(["call.connected"]), false), closeModal];
 
-export const onCancel = [
-  set(state(["call.connected"]), false),
-  closeModal
-];
+export const onCancel = [set(state(["call.connected"]), false), closeModal];
 
-export const onRegistrationFailed = [
-  set(state(["registered"]), false),
-]
+export const onRegistrationFailed = [set(state(["registered"]), false)];
