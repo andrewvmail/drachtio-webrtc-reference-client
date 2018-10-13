@@ -27,7 +27,7 @@ import { PrivacyPolicy } from '../privacy-policy/privacy-policy'
     </button>
     <button ion-item (tap)="navigate('privacy')">
       <ion-icon name="information" item-start></ion-icon>
-      About
+      Privacy Policy
     </button> 
     </ion-list>
   `
