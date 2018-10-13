@@ -272,7 +272,7 @@ var SettingsMenu = /** @class */ (function (_super) {
     };
     SettingsMenu = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            template: "\n    <ion-list>\n    <ion-list-header color=\"primary\">Menu</ion-list-header>\n    <button ion-item (tap)=\"addIceServer()\">\n      <ion-icon name=\"add\" item-start></ion-icon>Add an Ice Server\n    </button>\n    <button ion-item (tap)=\"navigate()\">\n      <ion-icon name=\"book\" item-start></ion-icon>\n      Libraries We Use\n    </button>\n    <button ion-item (tap)=\"navigate('about')\">\n      <ion-icon name=\"information\" item-start></ion-icon>\n      About\n    </button>\n    <button ion-item (tap)=\"navigate('privacy')\">\n      <ion-icon name=\"information\" item-start></ion-icon>\n      About\n    </button> \n    </ion-list>\n  "
+            template: "\n    <ion-list>\n    <ion-list-header color=\"primary\">Menu</ion-list-header>\n    <button ion-item (tap)=\"addIceServer()\">\n      <ion-icon name=\"add\" item-start></ion-icon>Add an Ice Server\n    </button>\n    <button ion-item (tap)=\"navigate()\">\n      <ion-icon name=\"book\" item-start></ion-icon>\n      Libraries We Use\n    </button>\n    <button ion-item (tap)=\"navigate('about')\">\n      <ion-icon name=\"information\" item-start></ion-icon>\n      About\n    </button>\n    <button ion-item (tap)=\"navigate('privacy')\">\n      <ion-icon name=\"information\" item-start></ion-icon>\n      Privacy Policy\n    </button> \n    </ion-list>\n  "
         }),
         Object(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["connect"])({
             addIceServer: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["addIceServer"])
