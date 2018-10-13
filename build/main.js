@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 122:
+/***/ 121:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 122;
+webpackEmptyAsyncContext.id = 121;
 
 /***/ }),
 
-/***/ 163:
+/***/ 162:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,7 +30,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 163;
+webpackEmptyAsyncContext.id = 162;
 
 /***/ }),
 
@@ -79,7 +79,7 @@ var RegistrarTabsPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialerPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_cerebral_tags__ = __webpack_require__(26);
 var __extends = (this && this.__extends) || (function () {
@@ -114,7 +114,7 @@ var DialerPage = /** @class */ (function (_super) {
     }
     DialerPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-registrar-dialer",template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/dialer/dialer.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{registered ? \'Registered as \' + (name || authUsername) : \'Not Registered\' }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="outer-content">\n    <audio id="remoteAudio"></audio>\n\n    <ion-item>\n      <ion-input class="text--large" type="text" value="{{toCall}}" placeholder="Enter a number or name"\n                 (blur)="saveInput({target: \'toCall\', value: $event.target.value})"\n      ></ion-input>\n    </ion-item>\n\n</ion-content>\n\n<ion-footer no-border>\n  <button class="btn--no-border" color="secondary" full large ion-button item-end\n          (click)="registered ? unregister() : register()"\n  >\n    {{registered ? \'Unregister\' : \'Register\' }}\n  </button>\n  <button class="btn--no-border" full large ion-button item-end (click)="call()">Call</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/dialer/dialer.html"*/,
+            selector: "page-dialer",template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/dialer/dialer.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{registered ? \'Registered as \' + (name || authUsername) : \'Not Registered\' }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="outer-content">\n    <audio id="remoteAudio"></audio>\n    <ion-item>\n      <ion-input class="text--large"\n                 type="text"\n                 value="{{toCall}}"\n                 placeholder="Enter a number or name"\n                 (blur)="saveInput({target: \'toCall\', value: $event.target.value})">\n      </ion-input>\n    </ion-item>\n    <!--<img class="momo" width="100%" src="../assets/imgs/momo.jpeg" />-->\n</ion-content>\n\n\n<ion-footer no-border>\n  <button class="btn--no-border" color="secondary" full large ion-button item-end\n          (click)="registered ? unregister() : register()"\n  >\n    {{registered ? \'Unregister\' : \'Register\' }}\n  </button>\n  <button class="btn--no-border" full large ion-button item-end (click)="call()">Call</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/dialer/dialer.html"*/,
             changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* ChangeDetectionStrategy */].OnPush
         }),
         Object(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["connect"])({
@@ -143,10 +143,10 @@ var DialerPage = /** @class */ (function (_super) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_cerebral_tags__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu__ = __webpack_require__(216);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -201,7 +201,7 @@ var SettingsPage = /** @class */ (function (_super) {
             addIceServer: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["addIceServer"]),
             deleteIceServer: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["deleteIceServer"]),
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"]) === "function" && _a || Object, __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* PopoverController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"]) === "function" && _a || Object, __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* PopoverController */]])
     ], SettingsPage);
     return SettingsPage;
     var _a;
@@ -217,9 +217,12 @@ var SettingsPage = /** @class */ (function (_super) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsMenu; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_cerebral_tags__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__libraries_we_use_libraries_we_use__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__about_about__ = __webpack_require__(218);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -242,22 +245,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var SettingsMenu = /** @class */ (function (_super) {
     __extends(SettingsMenu, _super);
-    function SettingsMenu(cdr, controller) {
+    function SettingsMenu(cdr, controller, navCtrl) {
         var _this = _super.call(this, cdr, controller) || this;
         _this.cdr = cdr;
         _this.controller = controller;
+        _this.navCtrl = navCtrl;
         return _this;
     }
+    SettingsMenu.prototype.navigate = function (component) {
+        if (component === "about") {
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__about_about__["a" /* About */]);
+            return;
+        }
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__libraries_we_use_libraries_we_use__["a" /* LibrariesWeUse */]);
+    };
     SettingsMenu = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            template: "\n    <ion-list>\n    <ion-list-header color=\"primary\">Menu</ion-list-header>\n    <button ion-item (tap)=\"addIceServer()\">\n      <ion-icon name=\"add\" item-start></ion-icon>Add an Ice Server</button>\n  </ion-list>\n  "
+            template: "\n    <ion-list>\n    <ion-list-header color=\"primary\">Menu</ion-list-header>\n    <button ion-item (tap)=\"addIceServer()\">\n      <ion-icon name=\"add\" item-start></ion-icon>Add an Ice Server\n    </button>\n    <button ion-item (tap)=\"navigate()\">\n      <ion-icon name=\"book\" item-start></ion-icon>\n      Libraries We Use\n    </button>\n    <button ion-item (tap)=\"navigate('about')\">\n      <ion-icon name=\"information\" item-start></ion-icon>\n      About\n    </button>\n    </ion-list>\n  "
         }),
         Object(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["connect"])({
-            addIceServer: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["addIceServer"]),
+            addIceServer: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["addIceServer"])
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"]) === "function" && _a || Object, __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* NavController */]])
     ], SettingsMenu);
     return SettingsMenu;
     var _a;
@@ -271,12 +285,68 @@ var SettingsMenu = /** @class */ (function (_super) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibrariesWeUse; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var LibrariesWeUse = /** @class */ (function () {
+    function LibrariesWeUse() {
+    }
+    LibrariesWeUse = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-libraries-we-use",template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/libraries-we-use/libraries-we-use.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Libraries We Use</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding class="outer-content">\n  <h3 ion-text color="primary">Ionic</h3>\n  <p ion-text color="secondary">Copyright 2015-present Drifty Co.\n    http://drifty.com/\n\n    MIT License\n\n    Permission is hereby granted, free of charge, to any person obtaining\n    a copy of this software and associated documentation files (the\n    "Software"), to deal in the Software without restriction, including\n    without limitation the rights to use, copy, modify, merge, publish,\n    distribute, sublicense, and/or sell copies of the Software, and to\n    permit persons to whom the Software is furnished to do so, subject to\n    the following conditions:\n\n    The above copyright notice and this permission notice shall be\n    included in all copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\n    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\n    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\n    LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\n    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\n    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>\n\n  <h3 ion-text color="primary">Cerebral</h3>\n  <p ion-text color="secondary">\n    Copyright (c) 2016 Cerebral\n\n    Permission is hereby granted, free of charge, to any person obtaining a copy\n    of this software and associated documentation files (the "Software"), to deal\n    in the Software without restriction, including without limitation the rights\n    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n    copies of the Software, and to permit persons to whom the Software is\n    furnished to do so, subject to the following conditions:\n\n    The above copyright notice and this permission notice shall be included in all\n    copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n    SOFTWARE.</p>\n\n  <h3 ion-text color="primary">cordova-plugin-iosrtc</h3>\n  <p ion-text color="secondary">\n    The MIT License (MIT)\n\n    Copyright (c) 2015-2017 eFace2Face, Inc. (https://eface2face.com)\n    Copyright (c) 2017 BasqueVoIPMafia (https://github.com/BasqueVoIPMafia)\n\n    Permission is hereby granted, free of charge, to any person obtaining a copy\n    of this software and associated documentation files (the "Software"), to deal\n    in the Software without restriction, including without limitation the rights\n    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n    copies of the Software, and to permit persons to whom the Software is\n    furnished to do so, subject to the following conditions:\n\n    The above copyright notice and this permission notice shall be included in\n    all copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n    THE SOFTWARE.</p>\n\n\n  <h3 ion-text color="primary">WebRTC</h3>\n  <p ion-text color="secondary">\n    Copyright (c) 2011, The WebRTC project authors. All rights reserved.\n\n    Redistribution and use in source and binary forms, with or without\n    modification, are permitted provided that the following conditions are\n    met:\n\n    * Redistributions of source code must retain the above copyright\n    notice, this list of conditions and the following disclaimer.\n\n    * Redistributions in binary form must reproduce the above copyright\n    notice, this list of conditions and the following disclaimer in\n    the documentation and/or other materials provided with the\n    distribution.\n\n    * Neither the name of Google nor the names of its contributors may\n    be used to endorse or promote products derived from this software\n    without specific prior written permission.\n\n    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n    A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n    HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n    LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>\n\n\n  <h3 ion-text color="primary">SIP.js</h3>\n  <p ion-text color="secondary">\n    Copyright (c) 2018 Junction Networks, Inc. http://www.onsip.com\n\n    The MIT License\n    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\n    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n    NOTE: The original MIT License text can be found at opensource.org.\n\n    ** SIP.js contains substantial portions of the JsSIP software under the following license: **\n\n    Copyright (c) 2012-2013 José Luis Millán - Versatica http://www.versatica.com\n\n    License: The MIT License\n\n    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\n    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n    ** end JsSIP license **</p>\n\n\n</ion-content>\n\n\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/libraries-we-use/libraries-we-use.html"*/,
+        })
+    ], LibrariesWeUse);
+    return LibrariesWeUse;
+}());
+
+//# sourceMappingURL=libraries-we-use.js.map
+
+/***/ }),
+
+/***/ 218:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return About; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var About = /** @class */ (function () {
+    function About() {
+    }
+    About = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-about",template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/about/about.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>About</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <ion-grid>\n    <ion-row>\n      <p padding>Version: 1.0.0</p>\n    </ion-row>\n    <ion-row>\n      <p padding>iOS WebRTC: GoogleWebRTC-1.1.25102</p>\n    </ion-row>\n    <ion-row>\n      <p padding>SIP.js: 0.11.3</p>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n\n\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/pages/about/about.html"*/,
+        })
+    ], About);
+    return About;
+}());
+
+//# sourceMappingURL=about.js.map
+
+/***/ }),
+
+/***/ 219:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__cerebral_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_cerebral_tags__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(37);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -321,7 +391,7 @@ var ModalPage = /** @class */ (function (_super) {
             answer: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["answer"]),
             hangup: Object(__WEBPACK_IMPORTED_MODULE_2_cerebral_tags__["b" /* signal */])(["hangup"]),
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"]) === "function" && _a || Object, __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* ViewController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__cerebral_angular__["ControllerService"]) === "function" && _a || Object, __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* ViewController */]])
     ], ModalPage);
     return ModalPage;
     var _a;
@@ -331,7 +401,7 @@ var ModalPage = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ 219:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -347,93 +417,94 @@ var ModalPage = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return onRejected; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return onCancel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return onRegistrationFailed; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral_operators__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral_operators__ = __webpack_require__(320);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral_tags__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions__ = __webpack_require__(338);
 
 
 
 var callSequence = [
-    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.type"]), "outgoing"),
-    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.name"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"])),
-    __WEBPACK_IMPORTED_MODULE_2__actions__["d" /* decideWhatToDo */],
+    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* checkSettings */],
     {
-        setToCallWithLastRedialed: [
-            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["lastDialed"]))
-        ],
-        doNothing: [],
-        call: [
-            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["lastDialed"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"])),
-            __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* call */],
+        next: [
+            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.type"]), "outgoing"),
+            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.name"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"])),
+            __WEBPACK_IMPORTED_MODULE_2__actions__["e" /* decideWhatToDo */],
             {
-                next: [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"]), "")],
-                error: [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"]), "")]
-            },
-            __WEBPACK_IMPORTED_MODULE_2__actions__["f" /* openInCallModal */],
-            Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false)
-        ]
+                setToCallWithLastRedialed: [
+                    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["lastDialed"]))
+                ],
+                doNothing: [],
+                call: [
+                    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["lastDialed"]), Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"])),
+                    __WEBPACK_IMPORTED_MODULE_2__actions__["b" /* call */],
+                    {
+                        next: [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"]), "")],
+                        error: [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["toCall"]), "")]
+                    },
+                    __WEBPACK_IMPORTED_MODULE_2__actions__["g" /* openInCallModal */],
+                    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false)
+                ]
+            }
+        ],
+        checkSettings: []
     }
 ];
 var registerSequence = [
-    __WEBPACK_IMPORTED_MODULE_2__actions__["i" /* shouldRegister */],
+    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* checkSettings */],
     {
-        register: [
-            __WEBPACK_IMPORTED_MODULE_2__actions__["g" /* register */],
+        next: [
+            __WEBPACK_IMPORTED_MODULE_2__actions__["h" /* register */],
             {
                 next: [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["registered"]), true)],
                 error: []
             }
-        ]
+        ],
+        checkSettings: []
     }
 ];
 var unregisterSequence = [__WEBPACK_IMPORTED_MODULE_2__actions__["j" /* unregister */]];
 var onInvite = [
     Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.type"]), "incoming"),
-    __WEBPACK_IMPORTED_MODULE_2__actions__["h" /* setCallName */],
-    __WEBPACK_IMPORTED_MODULE_2__actions__["f" /* openInCallModal */]
+    __WEBPACK_IMPORTED_MODULE_2__actions__["i" /* setCallName */],
+    __WEBPACK_IMPORTED_MODULE_2__actions__["g" /* openInCallModal */]
 ];
 var hangupSequence = [
-    __WEBPACK_IMPORTED_MODULE_2__actions__["e" /* hangup */],
-    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */],
+    __WEBPACK_IMPORTED_MODULE_2__actions__["f" /* hangup */],
+    __WEBPACK_IMPORTED_MODULE_2__actions__["d" /* closeModal */],
     Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false)
 ];
-var answerSequence = [
-    __WEBPACK_IMPORTED_MODULE_2__actions__["a" /* answer */],
-    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), true)
-];
-var onAccepted = [
-    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), true)
-];
-var onTerminated = [
-    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false),
-    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */]
-];
-var onBye = [
-    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false),
-    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */]
-];
-var onRejected = [
-    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false),
-    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */]
-];
-var onCancel = [
-    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false),
-    __WEBPACK_IMPORTED_MODULE_2__actions__["c" /* closeModal */]
-];
-var onRegistrationFailed = [
-    Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["registered"]), false),
-];
+var answerSequence = [__WEBPACK_IMPORTED_MODULE_2__actions__["a" /* answer */], Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), true)];
+var onAccepted = [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), true)];
+var onTerminated = [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false), __WEBPACK_IMPORTED_MODULE_2__actions__["d" /* closeModal */]];
+var onBye = [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false), __WEBPACK_IMPORTED_MODULE_2__actions__["d" /* closeModal */]];
+var onRejected = [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false), __WEBPACK_IMPORTED_MODULE_2__actions__["d" /* closeModal */]];
+var onCancel = [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["call.connected"]), false), __WEBPACK_IMPORTED_MODULE_2__actions__["d" /* closeModal */]];
+var onRegistrationFailed = [Object(__WEBPACK_IMPORTED_MODULE_0_cerebral_operators__["a" /* set */])(Object(__WEBPACK_IMPORTED_MODULE_1_cerebral_tags__["c" /* state */])(["registered"]), false)];
 //# sourceMappingURL=sequences.js.map
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    defaultIceServers: [
+        { url: "stun:stun.l.google.com:19302", username: "", credential: "" }
+    ]
+});
+//# sourceMappingURL=config.js.map
+
+/***/ }),
+
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(245);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(247);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -441,26 +512,28 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 245:
+/***/ 247:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export configureController */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cerebral_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__cerebral_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_dialer_dialer__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_settings_settings__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_in_call_modal_in_call_modal__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_in_call_modal_in_call_modal__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_settings_menu__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main__ = __webpack_require__(313);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_cerebral_devtools__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_libraries_we_use_libraries_we_use__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_about_about__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -481,17 +554,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-function configureController(modal) {
-    var cerebral = Object(__WEBPACK_IMPORTED_MODULE_12__main__["a" /* cerebralFactory */])(modal);
-    return new __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__["ControllerService"](cerebral, {
-        devtools: Object(__WEBPACK_IMPORTED_MODULE_13_cerebral_devtools__["a" /* default */])({
-            host: "localhost:9999",
-            reconnect: true,
-            storeMutations: true,
-            bigComponentsWarning: 5,
-            warnStateProps: true
-        })
-    });
+
+function configureController(modal, toast) {
+    var cerebral = Object(__WEBPACK_IMPORTED_MODULE_12__main__["a" /* cerebralFactory */])(modal, toast);
+    return new __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__["ControllerService"](cerebral, {});
 }
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -504,7 +570,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__pages_dialer_dialer__["a" /* DialerPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_settings_settings__["a" /* SettingsPage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_in_call_modal_in_call_modal__["a" /* ModalPage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_settings_menu__["a" /* SettingsMenu */]
+                __WEBPACK_IMPORTED_MODULE_11__pages_settings_menu__["a" /* SettingsMenu */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_libraries_we_use_libraries_we_use__["a" /* LibrariesWeUse */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_about_about__["a" /* About */]
             ],
             imports: [__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: []
@@ -516,13 +584,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__pages_dialer_dialer__["a" /* DialerPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_settings_settings__["a" /* SettingsPage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_in_call_modal_in_call_modal__["a" /* ModalPage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_settings_menu__["a" /* SettingsMenu */]
+                __WEBPACK_IMPORTED_MODULE_11__pages_settings_menu__["a" /* SettingsMenu */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_libraries_we_use_libraries_we_use__["a" /* LibrariesWeUse */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_about_about__["a" /* About */]
             ],
             providers: [
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_5__cerebral_angular__["ControllerService"],
                     useFactory: configureController,
-                    deps: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* ModalController */]]
+                    deps: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* ToastController */]]
                 },
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
@@ -537,15 +607,15 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 312:
+/***/ 314:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(213);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -574,7 +644,7 @@ var MyApp = /** @class */ (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/app/app.html"*/'<ion-nav #mycontent [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/andrew/projects/drachtio-webrtc-reference-client/client/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -583,17 +653,21 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 313:
+/***/ 315:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = cerebralFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cerebral_storage__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cerebral_storage__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cerebral_storage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cerebral_storage__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_Sip__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sequences__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_Modal__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_Sip__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sequences__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_Modal__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_Toast__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config__ = __webpack_require__(223);
+
+
 
 
 
@@ -602,7 +676,7 @@ var MyApp = /** @class */ (function () {
 
 var urlParams = new URLSearchParams(window.location.search);
 var username = urlParams.get("username");
-function cerebralFactory(modal) {
+function cerebralFactory(modal, toast) {
     return Object(__WEBPACK_IMPORTED_MODULE_1_cerebral__["Module"])({
         state: {
             settings: {
@@ -610,9 +684,7 @@ function cerebralFactory(modal) {
                 domain: "ctel.com",
                 username: "1234",
                 password: "1234",
-                iceServers: [
-                    { url: "stun:stun.l.google.com:19302", username: "", credential: "" }
-                ]
+                iceServers: __WEBPACK_IMPORTED_MODULE_6__config__["a" /* default */].defaultIceServers
                 // autoRegister: true,
             },
             lastDialed: "",
@@ -627,6 +699,7 @@ function cerebralFactory(modal) {
         },
         catch: [],
         providers: {
+            toast: Object(__WEBPACK_IMPORTED_MODULE_5__providers_Toast__["a" /* default */])(toast),
             modal: Object(__WEBPACK_IMPORTED_MODULE_4__providers_Modal__["a" /* default */])(modal),
             sip: Object(__WEBPACK_IMPORTED_MODULE_2__providers_Sip__["a" /* default */])({
                 onAccepted: __WEBPACK_IMPORTED_MODULE_3__sequences__["d" /* onAccepted */],
@@ -697,15 +770,20 @@ function cerebralFactory(modal) {
 
 /***/ }),
 
-/***/ 316:
+/***/ 318:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = Sip;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sip_js__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sip_js__ = __webpack_require__(319);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sip_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sip_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cerebral__ = __webpack_require__(21);
 
+document.addEventListener("deviceready", function () {
+    if (window.device.platform === "iOS") {
+        cordova.plugins.iosrtc.registerGlobals();
+    }
+});
 var EVENT_NAMES_TO_SIGNAL = [
     { event: "accepted", sequence: "onAccepted" },
     { event: "rejected", sequence: "onRejected" },
@@ -891,21 +969,23 @@ function Sip(_a) {
 
 /***/ }),
 
-/***/ 336:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["g"] = register;
+/* harmony export (immutable) */ __webpack_exports__["h"] = register;
 /* harmony export (immutable) */ __webpack_exports__["j"] = unregister;
 /* harmony export (immutable) */ __webpack_exports__["b"] = call;
-/* harmony export (immutable) */ __webpack_exports__["d"] = decideWhatToDo;
-/* harmony export (immutable) */ __webpack_exports__["i"] = shouldRegister;
-/* harmony export (immutable) */ __webpack_exports__["f"] = openInCallModal;
-/* harmony export (immutable) */ __webpack_exports__["h"] = setCallName;
+/* harmony export (immutable) */ __webpack_exports__["e"] = decideWhatToDo;
+/* harmony export (immutable) */ __webpack_exports__["c"] = checkSettings;
+/* harmony export (immutable) */ __webpack_exports__["g"] = openInCallModal;
+/* harmony export (immutable) */ __webpack_exports__["i"] = setCallName;
 /* harmony export (immutable) */ __webpack_exports__["a"] = answer;
-/* harmony export (immutable) */ __webpack_exports__["e"] = hangup;
-/* harmony export (immutable) */ __webpack_exports__["c"] = closeModal;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_in_call_modal_in_call_modal__ = __webpack_require__(217);
+/* harmony export (immutable) */ __webpack_exports__["f"] = hangup;
+/* harmony export (immutable) */ __webpack_exports__["d"] = closeModal;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_in_call_modal_in_call_modal__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config__ = __webpack_require__(223);
+
 
 function register(_a) {
     var sip = _a.sip, state = _a.state, path = _a.path;
@@ -968,9 +1048,23 @@ function decideWhatToDo(_a) {
     }
     return path.doNothing();
 }
-function shouldRegister(_a) {
-    var path = _a.path;
-    return path.register();
+function checkSettings(_a) {
+    var state = _a.state, path = _a.path, toast = _a.toast;
+    var iceServers = state.get("settings.iceServers");
+    if (iceServers === []) {
+        state.push('settings.iceServers', __WEBPACK_IMPORTED_MODULE_1__config__["a" /* default */].defaultIceServers);
+    }
+    var error = false;
+    iceServers.forEach(function (server) {
+        if (server.url.indexOf("stun:") === -1 && server.url.indexOf("turn:") === -1) {
+            error = true;
+        }
+    });
+    if (error) {
+        toast.show('Check your settings and ice configuration');
+        return path.checkSettings();
+    }
+    return path.next();
 }
 function openInCallModal(_a) {
     var modal = _a.modal;
@@ -1013,12 +1107,12 @@ function closeModal(_a) {
 
 /***/ }),
 
-/***/ 337:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = Modal;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral__ = __webpack_require__(21);
 
 function Modal(modal) {
     var modalInstance;
@@ -1047,7 +1141,31 @@ function Modal(modal) {
 }
 //# sourceMappingURL=Modal.js.map
 
+/***/ }),
+
+/***/ 340:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = Toast;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_cerebral__ = __webpack_require__(21);
+
+function Toast(toast) {
+    var toastInstance;
+    return Object(__WEBPACK_IMPORTED_MODULE_0_cerebral__["Provider"])({
+        show: function (message) {
+            toastInstance = toast.create({
+                message: message,
+                duration: 3000,
+                position: "top"
+            });
+            toastInstance.present();
+        }
+    });
+}
+//# sourceMappingURL=Toast.js.map
+
 /***/ })
 
-},[222]);
+},[224]);
 //# sourceMappingURL=main.js.map
