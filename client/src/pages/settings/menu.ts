@@ -8,6 +8,7 @@ import { signal } from "cerebral/tags";
 import { NavController } from "ionic-angular";
 import { LibrariesWeUse } from "../libraries-we-use/libraries-we-use";
 import { About } from "../about/about";
+import { PrivacyPolicy } from '../privacy-policy/privacy-policy'
 
 @Component({
   template: `
@@ -24,6 +25,10 @@ import { About } from "../about/about";
       <ion-icon name="information" item-start></ion-icon>
       About
     </button>
+    <button ion-item (tap)="navigate('privacy')">
+      <ion-icon name="information" item-start></ion-icon>
+      About
+    </button> 
     </ion-list>
   `
 })
@@ -42,6 +47,10 @@ export class SettingsMenu extends CerebralComponent {
   navigate(component) {
     if (component === "about") {
       this.navCtrl.push(About);
+      return;
+    }
+    if (component === 'privacy') {
+      this.navCtrl.push(PrivacyPolicy);
       return;
     }
 

@@ -22,6 +22,7 @@ import { cerebralFactory } from "../main";
 import Devtools from "cerebral/devtools";
 import { LibrariesWeUse } from '../pages/libraries-we-use/libraries-we-use'
 import { About } from '../pages/about/about'
+import { PrivacyPolicy } from '../pages/privacy-policy/privacy-policy'
 
 export function configureController(modal: ModalController, toast: ToastController) {
   const cerebral = cerebralFactory(modal, toast);
@@ -46,7 +47,8 @@ export function configureController(modal: ModalController, toast: ToastControll
     ModalPage,
     SettingsMenu,
     LibrariesWeUse,
-    About
+    About,
+    PrivacyPolicy
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -58,7 +60,8 @@ export function configureController(modal: ModalController, toast: ToastControll
     ModalPage,
     SettingsMenu,
     LibrariesWeUse,
-    About
+    About,
+    PrivacyPolicy
   ],
   providers: [
     {
