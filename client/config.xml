@@ -19,6 +19,7 @@
     <preference name="FadeSplashScreenDuration" value="0" />
     <preference name="SplashScreenDelay" value="0" />
     <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="deployment-target" value="10.3" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
