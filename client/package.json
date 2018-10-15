@@ -1,6 +1,6 @@
 {
   "name": "Drachtio WebRTC Reference Client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Andrew Tan",
   "homepage": "https://github.com/andrewvmail/drachtio-webrtc-reference-client",
   "private": true,
