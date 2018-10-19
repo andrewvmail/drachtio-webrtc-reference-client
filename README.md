@@ -27,3 +27,4 @@ node app.js
 
 ## To build and run drachtio
 See https://github.com/davehorton/drachtio-server/tree/develop
+or get going fast at digitalocean https://gist.github.com/andrewvmail/4d1034ff19b123565375f8681c6f7556
